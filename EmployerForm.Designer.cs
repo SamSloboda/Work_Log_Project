@@ -53,6 +53,7 @@
             this.bt_addEmployee.TabIndex = 1;
             this.bt_addEmployee.Text = "Add Employee";
             this.bt_addEmployee.UseVisualStyleBackColor = true;
+            this.bt_addEmployee.Click += new System.EventHandler(this.bt_addEmployee_Click);
             // 
             // bt_removeEmployee
             // 
@@ -62,6 +63,7 @@
             this.bt_removeEmployee.TabIndex = 2;
             this.bt_removeEmployee.Text = "Remove Employee";
             this.bt_removeEmployee.UseVisualStyleBackColor = true;
+            this.bt_removeEmployee.Click += new System.EventHandler(this.bt_removeEmployee_Click);
             // 
             // bt_exit
             // 
@@ -71,6 +73,7 @@
             this.bt_exit.TabIndex = 3;
             this.bt_exit.Text = "Exit";
             this.bt_exit.UseVisualStyleBackColor = true;
+            this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
             // 
             // EmployerForm
             // 

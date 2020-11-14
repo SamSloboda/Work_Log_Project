@@ -21,5 +21,10 @@ namespace Work_Log_Project
         {
 
         }
+
+        private void bt_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

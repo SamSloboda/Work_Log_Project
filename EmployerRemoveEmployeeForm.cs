@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Work_Log_Project
 {
-    public partial class EmployerAddEmployeeForm : Form
+    public partial class EmployerRemoveEmployeeForm : Form
     {
-        public EmployerAddEmployeeForm()
+        public EmployerRemoveEmployeeForm()
         {
             InitializeComponent();
         }

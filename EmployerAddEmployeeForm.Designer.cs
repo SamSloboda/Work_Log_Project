@@ -40,7 +40,7 @@
             this.tb_passwordConfirm = new System.Windows.Forms.TextBox();
             this.tb_username = new System.Windows.Forms.TextBox();
             this.tb_password = new System.Windows.Forms.TextBox();
-            this.listbox_roles = new System.Windows.Forms.ListBox();
+            this.cb_role = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // bt_submit
@@ -69,6 +69,7 @@
             this.bt_exit.TabIndex = 2;
             this.bt_exit.Text = "Exit";
             this.bt_exit.UseVisualStyleBackColor = true;
+            this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
             // 
             // lb_name
             // 
@@ -147,24 +148,23 @@
             this.tb_password.Size = new System.Drawing.Size(154, 22);
             this.tb_password.TabIndex = 3;
             // 
-            // listbox_roles
+            // cb_role
             // 
-            this.listbox_roles.FormattingEnabled = true;
-            this.listbox_roles.ItemHeight = 16;
-            this.listbox_roles.Items.AddRange(new object[] {
-            "Administrator",
+            this.cb_role.FormattingEnabled = true;
+            this.cb_role.Items.AddRange(new object[] {
+            "Employer",
             "Employee"});
-            this.listbox_roles.Location = new System.Drawing.Point(207, 78);
-            this.listbox_roles.Name = "listbox_roles";
-            this.listbox_roles.Size = new System.Drawing.Size(154, 20);
-            this.listbox_roles.TabIndex = 1;
+            this.cb_role.Location = new System.Drawing.Point(207, 77);
+            this.cb_role.Name = "cb_role";
+            this.cb_role.Size = new System.Drawing.Size(154, 24);
+            this.cb_role.TabIndex = 1;
             // 
             // EmployerAddEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 354);
-            this.Controls.Add(this.listbox_roles);
+            this.Controls.Add(this.cb_role);
             this.Controls.Add(this.tb_password);
             this.Controls.Add(this.tb_username);
             this.Controls.Add(this.tb_passwordConfirm);
@@ -178,7 +178,7 @@
             this.Controls.Add(this.bt_clear);
             this.Controls.Add(this.bt_submit);
             this.Name = "EmployerAddEmployeeForm";
-            this.Text = "EmployerAddEmployeeForm";
+            this.Text = "Add Employee";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,6 +198,6 @@
         private System.Windows.Forms.TextBox tb_passwordConfirm;
         private System.Windows.Forms.TextBox tb_username;
         private System.Windows.Forms.TextBox tb_password;
-        private System.Windows.Forms.ListBox listbox_roles;
+        private System.Windows.Forms.ComboBox cb_role;
     }
 }

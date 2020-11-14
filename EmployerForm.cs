@@ -16,5 +16,22 @@ namespace Work_Log_Project
         {
             InitializeComponent();
         }
+
+        private void bt_addEmployee_Click(object sender, EventArgs e)
+        {
+            EmployerAddEmployeeForm addEmployee = new EmployerAddEmployeeForm();
+            addEmployee.ShowDialog();
+        }
+
+        private void bt_removeEmployee_Click(object sender, EventArgs e)
+        {
+            EmployerRemoveEmployeeForm removeEmployee = new EmployerRemoveEmployeeForm();
+            removeEmployee.ShowDialog();
+        }
+
+        private void bt_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
