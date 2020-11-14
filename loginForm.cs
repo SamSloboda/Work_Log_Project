@@ -17,9 +17,12 @@ namespace Work_Log_Project
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bt_login_Click(object sender, EventArgs e)
         {
-
+            EmployeeForm employeeForm = new EmployeeForm();
+            employeeForm.ShowDialog();
+            EmployerForm employerForm = new EmployerForm();
+            employerForm.ShowDialog();
         }
     }
 }

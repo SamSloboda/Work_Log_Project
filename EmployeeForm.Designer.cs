@@ -43,6 +43,7 @@
             this.bt_AddAttendance.TabIndex = 0;
             this.bt_AddAttendance.Text = "Add Attendance";
             this.bt_AddAttendance.UseVisualStyleBackColor = true;
+            this.bt_AddAttendance.Click += new System.EventHandler(this.bt_AddAttendance_Click);
             // 
             // bt_RemoveAttendance
             // 
@@ -52,6 +53,7 @@
             this.bt_RemoveAttendance.TabIndex = 1;
             this.bt_RemoveAttendance.Text = "Remove Attendance";
             this.bt_RemoveAttendance.UseVisualStyleBackColor = true;
+            this.bt_RemoveAttendance.Click += new System.EventHandler(this.bt_RemoveAttendance_Click);
             // 
             // bt_TotalAttendance
             // 

@@ -16,5 +16,17 @@ namespace Work_Log_Project
         {
             InitializeComponent();
         }
+
+        private void bt_AddAttendance_Click(object sender, EventArgs e)
+        {
+            EmployeeAddAttendanceForm addForm = new EmployeeAddAttendanceForm();
+            addForm.ShowDialog();
+        }
+
+        private void bt_RemoveAttendance_Click(object sender, EventArgs e)
+        {
+            EmployeeRemoveAttendaceForm removeForm = new EmployeeRemoveAttendaceForm();
+            removeForm.ShowDialog();
+        }
     }
 }

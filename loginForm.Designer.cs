@@ -44,7 +44,7 @@
             this.bt_login.TabIndex = 2;
             this.bt_login.Text = "Login";
             this.bt_login.UseVisualStyleBackColor = true;
-            this.bt_login.Click += new System.EventHandler(this.button1_Click);
+            this.bt_login.Click += new System.EventHandler(this.bt_login_Click);
             // 
             // lb_userName
             // 
