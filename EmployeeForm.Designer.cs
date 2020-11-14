@@ -28,32 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.bt_AddAttendance = new System.Windows.Forms.Button();
+            this.bt_RemoveAttendance = new System.Windows.Forms.Button();
+            this.bt_TotalAttendance = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // bt_AddAttendance
             // 
-            this.button1.Location = new System.Drawing.Point(55, 384);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_AddAttendance.Location = new System.Drawing.Point(44, 393);
+            this.bt_AddAttendance.Name = "bt_AddAttendance";
+            this.bt_AddAttendance.Size = new System.Drawing.Size(131, 35);
+            this.bt_AddAttendance.TabIndex = 0;
+            this.bt_AddAttendance.Text = "Add Attendance";
+            this.bt_AddAttendance.UseVisualStyleBackColor = true;
+            // 
+            // bt_RemoveAttendance
+            // 
+            this.bt_RemoveAttendance.Location = new System.Drawing.Point(190, 393);
+            this.bt_RemoveAttendance.Name = "bt_RemoveAttendance";
+            this.bt_RemoveAttendance.Size = new System.Drawing.Size(153, 35);
+            this.bt_RemoveAttendance.TabIndex = 1;
+            this.bt_RemoveAttendance.Text = "Remove Attendance";
+            this.bt_RemoveAttendance.UseVisualStyleBackColor = true;
+            // 
+            // bt_TotalAttendance
+            // 
+            this.bt_TotalAttendance.Location = new System.Drawing.Point(359, 393);
+            this.bt_TotalAttendance.Name = "bt_TotalAttendance";
+            this.bt_TotalAttendance.Size = new System.Drawing.Size(153, 35);
+            this.bt_TotalAttendance.TabIndex = 2;
+            this.bt_TotalAttendance.Text = "Total Attendance";
+            this.bt_TotalAttendance.UseVisualStyleBackColor = true;
             // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(546, 450);
+            this.Controls.Add(this.bt_TotalAttendance);
+            this.Controls.Add(this.bt_RemoveAttendance);
+            this.Controls.Add(this.bt_AddAttendance);
             this.Name = "EmployeeForm";
-            this.Text = "EmployeeForm";
+            this.Text = "Employee Screen";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_AddAttendance;
+        private System.Windows.Forms.Button bt_RemoveAttendance;
+        private System.Windows.Forms.Button bt_TotalAttendance;
     }
 }
