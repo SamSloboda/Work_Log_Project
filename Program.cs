@@ -17,6 +17,7 @@ namespace Work_Log_Project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new loginForm());
+            //Application.Run(new EmployeeAddAttendanceForm());
         }
     }
 }
