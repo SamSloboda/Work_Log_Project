@@ -19,10 +19,19 @@ namespace Work_Log_Project
 
         private void bt_login_Click(object sender, EventArgs e)
         {
-            EmployeeForm employeeForm = new EmployeeForm();
-            employeeForm.ShowDialog();
+            //Login form
             EmployerForm employerForm = new EmployerForm();
             employerForm.ShowDialog();
+            //Administrator Form
+
+            Administrator adminn = new Administrator();
+            adminn.ShowDialog();
+
+        }
+
+        private void loginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
