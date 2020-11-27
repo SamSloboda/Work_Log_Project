@@ -33,5 +33,11 @@ namespace Work_Log_Project
         {
 
         }
+
+        public class DatabaseConnect 
+        {
+            public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Sam Sloboda\\source\\repos\\Work_Log_Project\\Users.mdf;Integrated Security = True";
+        }
     }
+
 }

@@ -111,6 +111,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersDataSet.cs">
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UsersDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,19 +192,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TimeSheet.mdf">
+    <Content Include="db_WorkLog.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TimeSheet_log.ldf">
+    <Content Include="db_WorkLog_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>TimeSheet.mdf</DependentUpon>
-    </Content>
-    <Content Include="Users.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Users_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Users.mdf</DependentUpon>
+      <DependentUpon>db_WorkLog.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
