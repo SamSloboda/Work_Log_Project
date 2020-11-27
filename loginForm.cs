@@ -33,10 +33,22 @@ namespace Work_Log_Project
         {
 
         }
+       
+        public class DatabaseConnect
+        /**
+        * @momo; @samon => Just add your connection string, and comment out the others. DO NOT DELETE OTHERS CONNECTION STRING!
+        */
 
-        public class DatabaseConnect 
         {
-            public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Sam Sloboda\\source\\repos\\Work_Log_Project\\Users.mdf;Integrated Security = True";
+            //SAM's connection string bellow
+            public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Sam Sloboda\\source\\repos\\Work_Log_Project\\db_WorkLog.mdf;Integrated Security = True";
+            
+            //MOMO's connection string bellow
+            //public static String connectionString = "INSERT YOUR CONNECTION STRING HERE";
+            
+            //SAMON's connection string bellow
+            //public static String connectionString = "INSERT YOUR CONNECTION STRING HERE";
+
         }
     }
 
