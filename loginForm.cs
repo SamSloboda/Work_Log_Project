@@ -51,12 +51,12 @@ namespace Work_Log_Project
                 if (myReader.Read() == true)
                 {
 
-                    userClass currentUser = new userClass();
-                    currentUser.user_id = myReader.GetInt32(0);
-                    currentUser.username = myReader.GetString(1);
-                    currentUser.password = myReader.GetString(2);
-                    currentUser.adminAcc = myReader.GetBoolean(3);
-                    currentUser.activeUser = myReader.GetBoolean(4);
+                    //userClass currentUser = new userClass();
+                    userClass.user_id = myReader.GetInt32(0);
+                    userClass.username = myReader.GetString(1);
+                    userClass.password = myReader.GetString(2);
+                    userClass.adminAcc = myReader.GetBoolean(3);
+                    userClass.activeUser = myReader.GetBoolean(4);
                     /**currentUser.employee_id = myReader.GetInt32(5);
                     *currentUser.firstName = myReader.GetString(6);
                     *currentUser.middleName = myReader.GetString(7);
@@ -66,13 +66,13 @@ namespace Work_Log_Project
 
                     if (myReader.GetBoolean(3) == true)
                     {
-                        MessageBox.Show("You have logged in successfully as: Admin " + currentUser.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("You have logged in successfully as: Admin " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         EmployerForm employerForm = new EmployerForm();
                         employerForm.ShowDialog();
                     }
                     if (myReader.GetBoolean(3) == false)
                     {
-                        MessageBox.Show("You have logged in successfully as: User " + currentUser.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("You have logged in successfully as: User " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         EmployeeForm employeeForm = new EmployeeForm();
                         employeeForm.ShowDialog();
                     }

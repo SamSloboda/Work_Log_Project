@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace Work_Log_Project
 {
-    public class userClass
+    public static class userClass
     {
-        public string username 
+        public static string username 
         { get; set; }
-        public string password
+        public static string password
         { get; set; }
-        public bool adminAcc
+        public static bool adminAcc
         { get; set; }
-        public bool activeUser
+        public static bool activeUser
         { get; set; }
-        public int user_id
+        public static int user_id
         { get; set; }
-        public int employee_id
+        public static int employee_id
         { get; set; }
-        public string firstName
+        public static string firstName
         { get; set; }
-        public string middleName
+        public static string middleName
         { get; set; }
-        public string lastName
+        public static string lastName
         { get; set; }
-        public DateTime creationTime
+        public static DateTime creationTime
         { get; set; }
 
     }

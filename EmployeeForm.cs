@@ -32,36 +32,33 @@ namespace Work_Log_Project
 
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
-            /**
-             * String cs = loginForm.DatabaseConnect.connectionString;
+            String cs = loginForm.DatabaseConnect.connectionString;
             SqlConnection con = new SqlConnection(cs);
 
-            string sel = "select * FROM db_User where username = @username AND password = @password ";
+            string sel = "select * FROM db_User right join Employee on db_User.user_id = Employee.user_id where db_User.user_id = @user_id ";
             SqlCommand myCommand = new SqlCommand(sel, con); ;
 
-            SqlParameter uName = new SqlParameter("@username", SqlDbType.VarChar);
-            SqlParameter uPassword = new SqlParameter("@password", SqlDbType.VarChar);
+            SqlParameter uID = new SqlParameter("@user_id", SqlDbType.Int);
 
-            uName.Value = tb_username.Text;
-            uPassword.Value = tb_password.Text;
-
-            myCommand.Parameters.Add(uName);
-            myCommand.Parameters.Add(uPassword);
-
+            uID.Value = userClass.user_id;
+            MessageBox.Show(userClass.user_id.ToString());
+            myCommand.Parameters.Add(uID);
             myCommand.Connection.Open();
 
 
-            SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+            SqlDataReader myReader1 = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
 
-            currentUser.employee_id = myReader.GetInt32(5);
-            currentUser.firstName = myReader.GetString(6);
-            currentUser.middleName = myReader.GetString(7);
-            currentUser.lastName = myReader.GetString(8);
-            currentUser.creationTime = myReader.GetDateTime(9);
-             */
+            if (myReader1.Read() == true)
+            {
+                userClass.employee_id = myReader1.GetInt32(6);
+                userClass.firstName = myReader1.GetString(7);
+                userClass.middleName = myReader1.GetString(8);
+                userClass.lastName = myReader1.GetString(9);
+                userClass.creationTime = myReader1.GetDateTime(10);
+            }
 
 
-            this.Text = "'s Work Log";
+            this.Text = userClass.firstName+" "+userClass.lastName+"'s Work Log";
 
             listView1.Columns.Add("Date", 100);
             listView1.Columns.Add("Start", 150);
