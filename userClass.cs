@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Work_Log_Project
 {
-    class userClass
+    public class userClass
     {
         public string username 
         { get; set; }

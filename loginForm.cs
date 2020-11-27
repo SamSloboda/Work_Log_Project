@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 
 namespace Work_Log_Project
 {
+    
     public partial class loginForm : Form
     {
         public loginForm()

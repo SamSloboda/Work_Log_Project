@@ -32,6 +32,37 @@ namespace Work_Log_Project
 
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
+            /**
+             * String cs = loginForm.DatabaseConnect.connectionString;
+            SqlConnection con = new SqlConnection(cs);
+
+            string sel = "select * FROM db_User where username = @username AND password = @password ";
+            SqlCommand myCommand = new SqlCommand(sel, con); ;
+
+            SqlParameter uName = new SqlParameter("@username", SqlDbType.VarChar);
+            SqlParameter uPassword = new SqlParameter("@password", SqlDbType.VarChar);
+
+            uName.Value = tb_username.Text;
+            uPassword.Value = tb_password.Text;
+
+            myCommand.Parameters.Add(uName);
+            myCommand.Parameters.Add(uPassword);
+
+            myCommand.Connection.Open();
+
+
+            SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+            currentUser.employee_id = myReader.GetInt32(5);
+            currentUser.firstName = myReader.GetString(6);
+            currentUser.middleName = myReader.GetString(7);
+            currentUser.lastName = myReader.GetString(8);
+            currentUser.creationTime = myReader.GetDateTime(9);
+             */
+
+
+            this.Text = "'s Work Log";
+
             listView1.Columns.Add("Date", 100);
             listView1.Columns.Add("Start", 150);
             listView1.Columns.Add("End", 70);
@@ -40,10 +71,10 @@ namespace Work_Log_Project
             listView1.View = View.Details;
 
             String constr = loginForm.DatabaseConnect.connectionString;
-            SqlConnection con = new SqlConnection(constr);  // create the database connecting
+            SqlConnection con1 = new SqlConnection(constr);  // create the database connecting
 
-            String sel = "SELECT TimeLog.employee_id, TimeLog.startTime, TimeLog.endTime, TimeLog.breakTime FROM TimeLog where TimeLog.employee_id = '2' ";
-            SqlDataAdapter Da = new SqlDataAdapter(sel, con); // Create the tableAdapter/ dataAdapter
+            String sel1 = "SELECT TimeLog.employee_id, TimeLog.startTime, TimeLog.endTime, TimeLog.breakTime FROM TimeLog where TimeLog.employee_id = '2' ";
+            SqlDataAdapter Da = new SqlDataAdapter(sel1, con1); // Create the tableAdapter/ dataAdapter
             DataSet ds = new DataSet();  // Need the Dataset to populate data from the table
             DataTable dt;
 
@@ -51,7 +82,7 @@ namespace Work_Log_Project
 
 
             dt = ds.Tables["QueryResult_TimeLog"];
-            con.Close();
+            con1.Close();
             int i;
             for (i = 0; i <= dt.Rows.Count - 1; i++)
             {
