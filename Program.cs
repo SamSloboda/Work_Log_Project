@@ -16,7 +16,8 @@ namespace Work_Log_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginForm());
+            loginForm loginForm1 = new loginForm();
+            Application.Run(loginForm1);
             
         }
     }

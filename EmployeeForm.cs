@@ -42,7 +42,7 @@ namespace Work_Log_Project
             String constr = loginForm.DatabaseConnect.connectionString;
             SqlConnection con = new SqlConnection(constr);  // create the database connecting
 
-            String sel = "SELECT TimeLog.employee_id, TimeLog.startTime, TimeLog.endTime, TimeLog.breakTime FROM TimeLog where TimeLog.employee_id = '2' ";  // Create the SQL query to be executed
+            String sel = "SELECT TimeLog.employee_id, TimeLog.startTime, TimeLog.endTime, TimeLog.breakTime FROM TimeLog where TimeLog.employee_id = '2' ";
             SqlDataAdapter Da = new SqlDataAdapter(sel, con); // Create the tableAdapter/ dataAdapter
             DataSet ds = new DataSet();  // Need the Dataset to populate data from the table
             DataTable dt;
