@@ -18,6 +18,16 @@ namespace Work_Log_Project
         { get; set; }
         public int user_id
         { get; set; }
+        public int employee_id
+        { get; set; }
+        public string firstName
+        { get; set; }
+        public string middleName
+        { get; set; }
+        public string lastName
+        { get; set; }
+        public DateTime creationTime
+        { get; set; }
 
     }
 }
