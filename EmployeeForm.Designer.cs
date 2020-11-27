@@ -31,8 +31,7 @@
             this.bt_AddAttendance = new System.Windows.Forms.Button();
             this.bt_RemoveAttendance = new System.Windows.Forms.Button();
             this.bt_TotalAttendance = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // bt_AddAttendance
@@ -64,28 +63,30 @@
             this.bt_TotalAttendance.Text = "Total Attendance";
             this.bt_TotalAttendance.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // listView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 15);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(500, 368);
-            this.dataGridView1.TabIndex = 3;
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(8, 10);
+            this.listView1.MultiSelect = false;
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(531, 369);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(546, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.bt_TotalAttendance);
             this.Controls.Add(this.bt_RemoveAttendance);
             this.Controls.Add(this.bt_AddAttendance);
             this.Name = "EmployeeForm";
             this.Text = "Employee Screen";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.EmployeeForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -95,6 +96,6 @@
         private System.Windows.Forms.Button bt_AddAttendance;
         private System.Windows.Forms.Button bt_RemoveAttendance;
         private System.Windows.Forms.Button bt_TotalAttendance;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ListView listView1;
     }
 }
