@@ -47,7 +47,7 @@ namespace Work_Log_Project
             try
             {
                 //creating  queery and executing the command
-                string query = "insert into TimeLog (employee_id, startTime, endTime, breakTime) values('"+ userClass.employee_id + "','" + startTime + "','" + endTime + "','" + totalBreak + "', '"+ activeLog +"')";
+                string query = "insert into TimeLog (employee_id, startTime, endTime, breakTime, activeLog) values('"+ userClass.employee_id + "','" + startTime + "','" + endTime + "','" + totalBreak + "', '"+ activeLog +"')";
                 cmd.CommandText = query;
                 con.Open();
                 
