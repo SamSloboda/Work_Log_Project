@@ -98,7 +98,7 @@ namespace Work_Log_Project
             String cs = loginForm.DatabaseConnect.connectionString;
             SqlConnection con1 = new SqlConnection(cs);
             ///show all the ACTIVE timeLogs for the current user
-            String sel1 = "SELECT TimeLog.employee_id, TimeLog.startTime, TimeLog.endTime, TimeLog.breakTime FROM TimeLog where TimeLog.employee_id = '" + userClass.employee_id + "', TimeLog.activeLog = '"+ true +"'  ";
+            String sel1 = "SELECT TimeLog.employee_id, TimeLog.startTime, TimeLog.endTime, TimeLog.breakTime FROM TimeLog where TimeLog.employee_id = '" + userClass.employee_id + "' AND TimeLog.activeLog = '"+ true +"'  ";
             SqlDataAdapter Da = new SqlDataAdapter(sel1, con1);
             DataSet ds = new DataSet();
             DataTable dt;
