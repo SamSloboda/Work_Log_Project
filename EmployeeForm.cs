@@ -30,11 +30,8 @@ namespace Work_Log_Project
             removeForm.ShowDialog();
         }
 
-        private void EmployeeForm_Load(object sender, EventArgs e)
+        public void loadDataToClass(SqlConnection con) 
         {
-            String cs = loginForm.DatabaseConnect.connectionString;
-            SqlConnection con = new SqlConnection(cs);
-
             string sel = "select * FROM db_User right join Employee on db_User.user_id = Employee.user_id where db_User.user_id = @user_id ";
             SqlCommand myCommand = new SqlCommand(sel, con);
             SqlParameter uID = new SqlParameter("@user_id", SqlDbType.Int);
@@ -49,13 +46,22 @@ namespace Work_Log_Project
             {
                 userClass.employee_id = myReader1.GetInt32(6);
                 userClass.firstName = myReader1.GetString(7);
-                if (myReader1.IsDBNull(8) == false) 
-                { 
+                if (myReader1.IsDBNull(8) == false)
+                {
                     userClass.middleName = myReader1.GetString(8);
-                }                
+                }
                 userClass.lastName = myReader1.GetString(9);
                 userClass.creationTime = myReader1.GetDateTime(10);
             }
+        }
+
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+            String cs = loginForm.DatabaseConnect.connectionString;
+            SqlConnection con = new SqlConnection(cs);
+
+            loadDataToClass(con);
+            
             con.Close();
 
 
@@ -68,6 +74,17 @@ namespace Work_Log_Project
             listView1.Columns.Add("Break", 70);
             listView1.View = View.Details;
 
+            refreshListView();
+        }
+
+        private void bt_update_Click(object sender, EventArgs e)
+        {
+            refreshListView();
+        }
+
+        private void refreshListView()
+        {
+            String cs = loginForm.DatabaseConnect.connectionString;
             SqlConnection con1 = new SqlConnection(cs);
             String sel1 = "SELECT TimeLog.employee_id, TimeLog.startTime, TimeLog.endTime, TimeLog.breakTime FROM TimeLog where TimeLog.employee_id = '" + userClass.employee_id + "'  ";
             SqlDataAdapter Da = new SqlDataAdapter(sel1, con1);
@@ -81,19 +98,24 @@ namespace Work_Log_Project
             int i;
             string[] starting;
             string[] ending;
+            listView1.Items.Clear();
             for (i = 0; i <= dt.Rows.Count - 1; i++)
             {
-                starting = dt.Rows[i].ItemArray[1].ToString().Split(' ');                
+                starting = dt.Rows[i].ItemArray[1].ToString().Split(' ');
                 ending = dt.Rows[i].ItemArray[2].ToString().Split(' ');
 
                 listView1.Items.Add(starting[0]);
-                listView1.Items[i].SubItems.Add(starting[1]+" "+starting[2]);                
-                listView1.Items[i].SubItems.Add(ending[1]+" "+ending[2]);
+                listView1.Items[i].SubItems.Add(starting[1] + " " + starting[2]);
+                listView1.Items[i].SubItems.Add(ending[1] + " " + ending[2]);
                 listView1.Items[i].SubItems.Add(dt.Rows[i].ItemArray[3].ToString());
             }
+
 
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
     }
-}
+
+
+ }
+

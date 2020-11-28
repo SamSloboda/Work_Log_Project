@@ -33,6 +33,7 @@
             this.bt_TotalAttendance = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.lb_top = new System.Windows.Forms.Label();
+            this.bt_update = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bt_AddAttendance
@@ -85,11 +86,22 @@
             this.lb_top.TabIndex = 4;
             this.lb_top.Text = "Logged in as: ";
             // 
+            // bt_update
+            // 
+            this.bt_update.Location = new System.Drawing.Point(620, 70);
+            this.bt_update.Name = "bt_update";
+            this.bt_update.Size = new System.Drawing.Size(153, 35);
+            this.bt_update.TabIndex = 5;
+            this.bt_update.Text = "Update";
+            this.bt_update.UseVisualStyleBackColor = true;
+            this.bt_update.Click += new System.EventHandler(this.bt_update_Click);
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 586);
+            this.Controls.Add(this.bt_update);
             this.Controls.Add(this.lb_top);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.bt_TotalAttendance);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.Button bt_TotalAttendance;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label lb_top;
+        private System.Windows.Forms.Button bt_update;
     }
 }
