@@ -22,27 +22,36 @@ namespace Work_Log_Project
         {
 
         }
-
+        /*
+         * Exit button handler.
+         */
         private void bt_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        /*
+         * Submit button handler.
+         */
         private void bt_submit_Click(object sender, EventArgs e)
-        {
+        {   
+            /// assinging the values from user inputs to the variables
             DateTime startTime = dt_startTime.Value;
             DateTime endTime = dt_endTime.Value;
             int totalBreak = (int)(ud_lunchBreak.Value + ud_otherBreaks.Value);
+            bool activeLog = true; ///make the log active as we add it
 
+            ///creating connection and command
             String constr = loginForm.DatabaseConnect.connectionString;
             SqlConnection con = new SqlConnection(constr);
             SqlCommand cmd = con.CreateCommand();
             try
             {
-                //form the SQL insert query using the given data
-                string query = "insert into TimeLog (employee_id, startTime, endTime, breakTime) values('"+ userClass.employee_id + "','" + startTime + "','" + endTime + "','" + totalBreak + "')";
+                //creating  queery and executing the command
+                string query = "insert into TimeLog (employee_id, startTime, endTime, breakTime) values('"+ userClass.employee_id + "','" + startTime + "','" + endTime + "','" + totalBreak + "', '"+ activeLog +"')";
                 cmd.CommandText = query;
-                con.Open(); 
+                con.Open();
+                
+                ///creating flag to see if the insertion went smooth
                 Int32 returnFlag = (Int32)cmd.ExecuteNonQuery();
                 if (returnFlag > 0)
                     MessageBox.Show("Inserted Successfully");
