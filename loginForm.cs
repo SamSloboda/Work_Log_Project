@@ -36,20 +36,23 @@ namespace Work_Log_Project
                 SqlConnection con = new SqlConnection(cs);
 
                 ///select all the users that match password and username
-                string sel = "select * FROM db_User where username = @username AND password = @password ";
+                string sel = "select * FROM db_User where username = @username AND password = @password AND activeUser = @activeuser ";
                 SqlCommand myCommand = new SqlCommand(sel, con); ;
 
                 ///parameters for the sel command above
                 SqlParameter uName = new SqlParameter("@username", SqlDbType.VarChar);
                 SqlParameter uPassword = new SqlParameter("@password", SqlDbType.VarChar);
+                SqlParameter uActive = new SqlParameter("@activeuser", SqlDbType.Bit);
 
                 ///assigning values from the textboxes into parameters
                 uName.Value = tb_username.Text;
                 uPassword.Value = tb_password.Text;
+                uActive.Value = true; //user is active
 
                 ///adding paramaters to the command
                 myCommand.Parameters.Add(uName);
                 myCommand.Parameters.Add(uPassword);
+                myCommand.Parameters.Add(uActive);
 
                 ///opening connection
                 myCommand.Connection.Open();
