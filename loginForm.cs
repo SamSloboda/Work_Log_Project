@@ -49,30 +49,25 @@ namespace Work_Log_Project
                 SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
 
                 if (myReader.Read() == true)
-                {
-
-                    //userClass currentUser = new userClass();
+                {                    
                     userClass.user_id = myReader.GetInt32(0);
                     userClass.username = myReader.GetString(1);
                     userClass.password = myReader.GetString(2);
                     userClass.adminAcc = myReader.GetBoolean(3);
                     userClass.activeUser = myReader.GetBoolean(4);
-                    /**currentUser.employee_id = myReader.GetInt32(5);
-                    *currentUser.firstName = myReader.GetString(6);
-                    *currentUser.middleName = myReader.GetString(7);
-                    *currentUser.lastName = myReader.GetString(8);
-                    *currentUser.creationTime = myReader.GetDateTime(9);
-                    ***/
+                   
 
                     if (myReader.GetBoolean(3) == true)
                     {
                         MessageBox.Show("You have logged in successfully as: Admin " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        tb_password.Text = "";
                         EmployerForm employerForm = new EmployerForm();
                         employerForm.ShowDialog();
                     }
                     if (myReader.GetBoolean(3) == false)
                     {
                         MessageBox.Show("You have logged in successfully as: User " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        tb_password.Text = "";
                         EmployeeForm employeeForm = new EmployeeForm();
                         employeeForm.ShowDialog();
                     }
