@@ -18,6 +18,9 @@ namespace Work_Log_Project
             InitializeComponent();
         }
 
+        /**
+         * Button handler for the Add Atendance new form is shown.
+         */
         private void bt_AddAttendance_Click(object sender, EventArgs e)
         {
             EmployeeAddAttendanceForm addForm = new EmployeeAddAttendanceForm();
@@ -26,10 +29,12 @@ namespace Work_Log_Project
 
         private void bt_RemoveAttendance_Click(object sender, EventArgs e)
         {
-            EmployeeRemoveAttendaceForm removeForm = new EmployeeRemoveAttendaceForm();
-            removeForm.ShowDialog();
+            
         }
-
+        /**
+         * Loads the remaining data specific for the employee such as name, employee_id and creationtime to userClass class.
+         * 
+         */
         public void loadDataToClass(SqlConnection con) 
         {
             string sel = "select * FROM db_User right join Employee on db_User.user_id = Employee.user_id where db_User.user_id = @user_id ";
@@ -54,7 +59,9 @@ namespace Work_Log_Project
                 userClass.creationTime = myReader1.GetDateTime(10);
             }
         }
-
+        /**
+         * Loads the listview.
+         */
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
             String cs = loginForm.DatabaseConnect.connectionString;
@@ -76,12 +83,16 @@ namespace Work_Log_Project
 
             refreshListView();
         }
-
+        /**
+         * Button handler for update button. 
+         */
         private void bt_update_Click(object sender, EventArgs e)
         {
             refreshListView();
         }
-
+        /*
+         * Refreshes the list. => Connects to database and refreshes the listView.
+         */
         private void refreshListView()
         {
             String cs = loginForm.DatabaseConnect.connectionString;
