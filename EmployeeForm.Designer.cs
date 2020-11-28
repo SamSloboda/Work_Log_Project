@@ -73,9 +73,10 @@
             this.listView1.Location = new System.Drawing.Point(49, 51);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(531, 508);
+            this.listView1.Size = new System.Drawing.Size(500, 510);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listView1_ColumnWidthChanging);
             // 
             // lb_top
             // 

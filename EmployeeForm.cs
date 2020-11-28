@@ -29,7 +29,65 @@ namespace Work_Log_Project
 
         private void bt_RemoveAttendance_Click(object sender, EventArgs e)
         {
-            
+            string message = "Are you sure you want to delete this time log entry?";
+            string caption = " Delete the Time Log Entry";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            MessageBoxIcon icon = MessageBoxIcon.Question;
+            DialogResult result = MessageBox.Show(this,message,caption, buttons, icon);
+
+            if (result == DialogResult.Yes)
+            {
+                String cs = loginForm.DatabaseConnect.connectionString;
+                SqlConnection con = new SqlConnection(cs);
+
+                try
+                {
+                    /// taking input which row is selected
+                    int log_id_remove = Int32.Parse(listView1.SelectedItems[0].Text);
+
+
+
+                    string query = "update TimeLog set TimeLog.activeLog = @activelog where log_id = @logID ";
+                    SqlCommand myCommand = new SqlCommand(query, con);
+
+                    SqlParameter lActive = new SqlParameter("@activelog", SqlDbType.Bit);
+                    SqlParameter lID = new SqlParameter("@logID", SqlDbType.Int);
+                    lActive.Value = false;
+                    lID.Value = log_id_remove;
+
+                    myCommand.Parameters.Add(lID);
+                    myCommand.Parameters.Add(lActive);
+
+                    myCommand.Connection.Open();
+
+                    Int32 returnFlag = (Int32)myCommand.ExecuteNonQuery();
+                    if (returnFlag > 0)
+                    {
+                        refreshListView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something went wrong");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            else 
+            {
+                
+            }
+
+
+
+
         }
         /**
          * Loads the remaining data specific for the employee such as name, employee_id and creationtime to userClass class.
@@ -58,6 +116,8 @@ namespace Work_Log_Project
                 userClass.lastName = myReader1.GetString(9);
                 userClass.creationTime = myReader1.GetDateTime(10);
             }
+
+            con.Close();
         }
         /**
          * Loads the listview.
@@ -75,9 +135,10 @@ namespace Work_Log_Project
             this.Text = userClass.firstName+" "+userClass.lastName+"'s Work Log";
             lb_top.Text = "Logged in as: " + userClass.firstName + " " + userClass.lastName;
 
+            listView1.Columns.Add("Log_Id", 0);
             listView1.Columns.Add("Date", 100);
-            listView1.Columns.Add("Start", 150);
-            listView1.Columns.Add("End", 70);
+            listView1.Columns.Add("Start", 100);
+            listView1.Columns.Add("End", 100);
             listView1.Columns.Add("Break", 70);
             listView1.View = View.Details;
 
@@ -98,7 +159,7 @@ namespace Work_Log_Project
             String cs = loginForm.DatabaseConnect.connectionString;
             SqlConnection con1 = new SqlConnection(cs);
             ///show all the ACTIVE timeLogs for the current user
-            String sel1 = "SELECT TimeLog.employee_id, TimeLog.startTime, TimeLog.endTime, TimeLog.breakTime FROM TimeLog where TimeLog.employee_id = '" + userClass.employee_id + "' AND TimeLog.activeLog = '"+ true +"'  ";
+            String sel1 = "SELECT TimeLog.employee_id, TimeLog.startTime, TimeLog.endTime, TimeLog.breakTime, TimeLog.log_id FROM TimeLog where TimeLog.employee_id = '" + userClass.employee_id + "' AND TimeLog.activeLog = '"+ true +"'  ";
             SqlDataAdapter Da = new SqlDataAdapter(sel1, con1);
             DataSet ds = new DataSet();
             DataTable dt;
@@ -110,21 +171,34 @@ namespace Work_Log_Project
             int i;
             string[] starting;
             string[] ending;
+            string log_id;
             listView1.Items.Clear();
+
             for (i = 0; i <= dt.Rows.Count - 1; i++)
             {
                 starting = dt.Rows[i].ItemArray[1].ToString().Split(' ');
                 ending = dt.Rows[i].ItemArray[2].ToString().Split(' ');
+                log_id = dt.Rows[i].ItemArray[4].ToString();
 
-                listView1.Items.Add(starting[0]);
+                listView1.Items.Add(log_id);
+                listView1.Items[i].SubItems.Add(starting[0]);
                 listView1.Items[i].SubItems.Add(starting[1] + " " + starting[2]);
                 listView1.Items[i].SubItems.Add(ending[1] + " " + ending[2]);
                 listView1.Items[i].SubItems.Add(dt.Rows[i].ItemArray[3].ToString());
             }
 
 
-            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+        }
+
+        /*
+         * Disabled the column width changing.
+         */
+        private void listView1_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.Cancel = true;
+            e.NewWidth = listView1.Columns[e.ColumnIndex].Width;
         }
     }
 
