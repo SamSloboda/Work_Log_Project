@@ -18,9 +18,12 @@ namespace Work_Log_Project
         {
             InitializeComponent();
         }
-
+        /**
+         * The function is invoked with click event of Login button.
+         */
         private void bt_login_Click(object sender, EventArgs e)
         {
+            ///checks if user inputs empty string into textBoxes
             if (tb_username.Text == "" || tb_password.Text == "") 
             {
                 MessageBox.Show("Please enter username and password!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -28,54 +31,67 @@ namespace Work_Log_Project
 
             try
             {
+                ///creates connection string and creates connection
                 String cs = DatabaseConnect.connectionString;
                 SqlConnection con = new SqlConnection(cs);
 
+                ///select all the users that match password and username
                 string sel = "select * FROM db_User where username = @username AND password = @password ";
                 SqlCommand myCommand = new SqlCommand(sel, con); ;
 
+                ///parameters for the sel command above
                 SqlParameter uName = new SqlParameter("@username", SqlDbType.VarChar);
                 SqlParameter uPassword = new SqlParameter("@password", SqlDbType.VarChar);
 
+                ///assigning values from the textboxes into parameters
                 uName.Value = tb_username.Text;
                 uPassword.Value = tb_password.Text;
 
+                ///adding paramaters to the command
                 myCommand.Parameters.Add(uName);
                 myCommand.Parameters.Add(uPassword);
 
+                ///opening connection
                 myCommand.Connection.Open();
  
-                
+                ///reader class for database  
                 SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
 
+                ///if the username and password was found in database return true
                 if (myReader.Read() == true)
-                {                    
+                {    
+                    ///assigning values of user to the userClass class.
                     userClass.user_id = myReader.GetInt32(0);
                     userClass.username = myReader.GetString(1);
                     userClass.password = myReader.GetString(2);
                     userClass.adminAcc = myReader.GetBoolean(3);
                     userClass.activeUser = myReader.GetBoolean(4);
                    
-
+                    ///if admin
                     if (myReader.GetBoolean(3) == true)
                     {
                         MessageBox.Show("You have logged in successfully as: Admin " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tb_password.Text = "";
+                        ///showing employerForm
                         EmployerForm employerForm = new EmployerForm();
                         employerForm.ShowDialog();
                     }
+                    ///if normal employee account
                     if (myReader.GetBoolean(3) == false)
                     {
                         MessageBox.Show("You have logged in successfully as: User " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tb_password.Text = "";
+                        ///showing employeeForm
                         EmployeeForm employeeForm = new EmployeeForm();
                         employeeForm.ShowDialog();
                     }
                 }
                 else 
                 {
+                    ///if the username and password doesn't match with all the users found in database
                     MessageBox.Show("Incorrect name or password!", "Incorect Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                ///if the connection is still present close the connection with database
                 if (con.State == ConnectionState.Open)
                 {
                     con.Dispose();
@@ -87,11 +103,6 @@ namespace Work_Log_Project
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-            //Administrator adminn = new Administrator();
-            //adminn.ShowDialog();
-
             
 
         }
