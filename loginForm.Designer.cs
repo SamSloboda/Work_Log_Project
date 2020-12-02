@@ -34,16 +34,18 @@
             this.tb_username = new System.Windows.Forms.TextBox();
             this.tb_password = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lb_close = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,24 +116,6 @@
             this.panel1.Size = new System.Drawing.Size(424, 54);
             this.panel1.TabIndex = 18;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Crimson;
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Location = new System.Drawing.Point(0, 248);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(425, 54);
-            this.panel2.TabIndex = 19;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Crimson;
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Location = new System.Drawing.Point(112, 393);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(170, 50);
-            this.panel3.TabIndex = 20;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
@@ -141,6 +125,15 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(425, 47);
             this.panel7.TabIndex = 21;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Crimson;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Location = new System.Drawing.Point(0, 248);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(425, 54);
+            this.panel2.TabIndex = 19;
             // 
             // panel4
             // 
@@ -152,6 +145,15 @@
             this.panel4.Size = new System.Drawing.Size(425, 47);
             this.panel4.TabIndex = 22;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Crimson;
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Location = new System.Drawing.Point(112, 393);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(170, 50);
+            this.panel3.TabIndex = 20;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
@@ -162,12 +164,38 @@
             this.panel5.Size = new System.Drawing.Size(164, 44);
             this.panel5.TabIndex = 21;
             // 
+            // lb_close
+            // 
+            this.lb_close.AutoSize = true;
+            this.lb_close.BackColor = System.Drawing.Color.Transparent;
+            this.lb_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.lb_close.ForeColor = System.Drawing.Color.Crimson;
+            this.lb_close.Location = new System.Drawing.Point(370, 9);
+            this.lb_close.Name = "lb_close";
+            this.lb_close.Size = new System.Drawing.Size(30, 29);
+            this.lb_close.TabIndex = 21;
+            this.lb_close.Text = "X";
+            this.lb_close.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, -3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(412, 32);
+            this.flowLayoutPanel1.TabIndex = 22;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.flowLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
+            this.flowLayoutPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseMove);
+            this.flowLayoutPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseUp);
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(412, 559);
+            this.Controls.Add(this.lb_close);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -179,12 +207,12 @@
             this.Text = "Login to Work Log";
             this.Load += new System.EventHandler(this.loginForm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,6 +232,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lb_close;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
