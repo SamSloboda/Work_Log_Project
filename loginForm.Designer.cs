@@ -37,10 +37,12 @@
             // 
             // bt_login
             // 
-            this.bt_login.Location = new System.Drawing.Point(87, 161);
-            this.bt_login.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bt_login.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
+            this.bt_login.ForeColor = System.Drawing.Color.White;
+            this.bt_login.Location = new System.Drawing.Point(42, 393);
             this.bt_login.Name = "bt_login";
-            this.bt_login.Size = new System.Drawing.Size(115, 40);
+            this.bt_login.Size = new System.Drawing.Size(158, 38);
             this.bt_login.TabIndex = 2;
             this.bt_login.Text = "Login";
             this.bt_login.UseVisualStyleBackColor = true;
@@ -49,47 +51,54 @@
             // lb_userName
             // 
             this.lb_userName.AutoSize = true;
-            this.lb_userName.Location = new System.Drawing.Point(27, 51);
+            this.lb_userName.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
+            this.lb_userName.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lb_userName.Location = new System.Drawing.Point(37, 51);
             this.lb_userName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_userName.Name = "lb_userName";
-            this.lb_userName.Size = new System.Drawing.Size(58, 13);
+            this.lb_userName.Size = new System.Drawing.Size(112, 27);
             this.lb_userName.TabIndex = 1;
             this.lb_userName.Text = "Username:";
             // 
             // lb_password
             // 
             this.lb_password.AutoSize = true;
-            this.lb_password.Location = new System.Drawing.Point(30, 98);
+            this.lb_password.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
+            this.lb_password.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lb_password.Location = new System.Drawing.Point(37, 176);
             this.lb_password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_password.Name = "lb_password";
-            this.lb_password.Size = new System.Drawing.Size(56, 13);
+            this.lb_password.Size = new System.Drawing.Size(108, 27);
             this.lb_password.TabIndex = 2;
             this.lb_password.Text = "Password:";
             // 
             // tb_username
             // 
-            this.tb_username.Location = new System.Drawing.Point(116, 49);
-            this.tb_username.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_username.Font = new System.Drawing.Font("Trebuchet MS", 20.25F);
+            this.tb_username.Location = new System.Drawing.Point(30, 81);
             this.tb_username.MaxLength = 10;
             this.tb_username.Name = "tb_username";
-            this.tb_username.Size = new System.Drawing.Size(132, 20);
+            this.tb_username.Size = new System.Drawing.Size(348, 32);
             this.tb_username.TabIndex = 0;
             // 
             // tb_password
             // 
-            this.tb_password.Location = new System.Drawing.Point(116, 98);
-            this.tb_password.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_password.Font = new System.Drawing.Font("Trebuchet MS", 20.25F);
+            this.tb_password.Location = new System.Drawing.Point(30, 223);
             this.tb_password.MaxLength = 10;
             this.tb_password.Name = "tb_password";
             this.tb_password.PasswordChar = '*';
-            this.tb_password.Size = new System.Drawing.Size(132, 20);
-            this.tb_password.TabIndex = 1;
+            this.tb_password.Size = new System.Drawing.Size(348, 32);
+            this.tb_password.TabIndex = 17;
             // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 520);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.ClientSize = new System.Drawing.Size(412, 559);
             this.Controls.Add(this.tb_password);
             this.Controls.Add(this.tb_username);
             this.Controls.Add(this.lb_password);
