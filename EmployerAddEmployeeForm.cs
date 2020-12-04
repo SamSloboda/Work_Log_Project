@@ -21,5 +21,10 @@ namespace Work_Log_Project
         {
             this.Close();
         }
+
+        private void bt_active_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

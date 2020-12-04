@@ -73,15 +73,17 @@ namespace Work_Log_Project
                     userClass.password = myReader.GetString(2);
                     userClass.adminAcc = myReader.GetBoolean(3);
                     userClass.activeUser = myReader.GetBoolean(4);
-                   
+
                     ///if admin
                     if (myReader.GetBoolean(3) == true)
                     {
                         MessageBox.Show("You have logged in successfully as: Admin " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tb_password.Text = "";
                         ///showing employerForm
-                        EmployerForm employerForm = new EmployerForm();
+                        AdminPage employerForm = new AdminPage();
                         employerForm.ShowDialog();
+                        WelcomeAdmin form = new WelcomeAdmin();
+                        form.ShowDialog();
                     }
                     ///if normal employee account
                     if (myReader.GetBoolean(3) == false)

@@ -7,15 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Work_Log_Project
 {
-    public partial class EmployerForm : Form
+    public partial class AdminPage : Form
     {
-        public EmployerForm()
+        public AdminPage()
         {
             InitializeComponent();
-        }
+
+            String constr = loginForm.DatabaseConnect.connectionString;
+            SqlConnection con = new SqlConnection(constr);
+            string query = "SELECT Employee.user_id AS 'USER ID' ,employee_id AS 'Employee ID' ,firstName AS 'First Name' ,middleName AS 'Middle Name',lastName AS'Last Name' ,creationTime AS 'Time of Creation' ,username AS 'Username', password AS 'Password' ,adminAcc AS'IS Admin?' ,activeUser AS 'Activated'  FROM Employee  JOIN db_User ON Employee.user_id = db_User.user_id";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Employee");
+            dataGridView1.DataSource = ds.Tables["Employee"].DefaultView;
+         }
 
         private void bt_addEmployee_Click(object sender, EventArgs e)
         {
