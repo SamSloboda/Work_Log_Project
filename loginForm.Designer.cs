@@ -185,7 +185,7 @@
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, -3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(412, 32);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(412, 28);
             this.flowLayoutPanel1.TabIndex = 22;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             this.flowLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
