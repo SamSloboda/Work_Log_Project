@@ -149,7 +149,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Location = new System.Drawing.Point(112, 393);
+            this.panel3.Location = new System.Drawing.Point(121, 419);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(170, 50);
             this.panel3.TabIndex = 20;
