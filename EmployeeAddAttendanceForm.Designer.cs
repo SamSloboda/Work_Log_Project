@@ -169,6 +169,7 @@
             // 
             // dt_endTime
             // 
+            this.dt_endTime.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.dt_endTime.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.dt_endTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dt_endTime.Location = new System.Drawing.Point(407, 9);
