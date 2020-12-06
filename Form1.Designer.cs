@@ -46,12 +46,12 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bt_submit = new System.Windows.Forms.Button();
+            this.bt_delete = new System.Windows.Forms.Button();
+            this.bt_create = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bt_create = new System.Windows.Forms.Button();
-            this.bt_delete = new System.Windows.Forms.Button();
-            this.bt_submit = new System.Windows.Forms.Button();
             this.employeeIDTextBox = new System.Windows.Forms.TextBox();
             this.full_NameTextBox = new System.Windows.Forms.TextBox();
             this.position_A_E_TextBox = new System.Windows.Forms.TextBox();
@@ -68,6 +68,56 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // employeeIDLabel
+            // 
+            employeeIDLabel.AutoSize = true;
+            employeeIDLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            employeeIDLabel.Location = new System.Drawing.Point(43, 55);
+            employeeIDLabel.Name = "employeeIDLabel";
+            employeeIDLabel.Size = new System.Drawing.Size(70, 13);
+            employeeIDLabel.TabIndex = 2;
+            employeeIDLabel.Text = "Employee ID:";
+            // 
+            // full_NameLabel
+            // 
+            full_NameLabel.AutoSize = true;
+            full_NameLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            full_NameLabel.Location = new System.Drawing.Point(43, 81);
+            full_NameLabel.Name = "full_NameLabel";
+            full_NameLabel.Size = new System.Drawing.Size(57, 13);
+            full_NameLabel.TabIndex = 4;
+            full_NameLabel.Text = "Full Name:";
+            // 
+            // position_A_E_Label
+            // 
+            position_A_E_Label.AutoSize = true;
+            position_A_E_Label.ForeColor = System.Drawing.Color.WhiteSmoke;
+            position_A_E_Label.Location = new System.Drawing.Point(43, 107);
+            position_A_E_Label.Name = "position_A_E_Label";
+            position_A_E_Label.Size = new System.Drawing.Size(72, 13);
+            position_A_E_Label.TabIndex = 6;
+            position_A_E_Label.Text = "Position(A\\E):";
+            // 
+            // usernameLabel
+            // 
+            usernameLabel.AutoSize = true;
+            usernameLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            usernameLabel.Location = new System.Drawing.Point(43, 133);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new System.Drawing.Size(58, 13);
+            usernameLabel.TabIndex = 8;
+            usernameLabel.Text = "Username:";
+            // 
+            // passwordLabel
+            // 
+            passwordLabel.AutoSize = true;
+            passwordLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            passwordLabel.Location = new System.Drawing.Point(43, 159);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new System.Drawing.Size(56, 13);
+            passwordLabel.TabIndex = 10;
+            passwordLabel.Text = "Password:";
             // 
             // usersDataSet
             // 
@@ -103,7 +153,7 @@
             this.usersDataGridView.DataSource = this.usersBindingSource;
             this.usersDataGridView.Location = new System.Drawing.Point(12, 282);
             this.usersDataGridView.Name = "usersDataGridView";
-            this.usersDataGridView.Size = new System.Drawing.Size(611, 138);
+            this.usersDataGridView.Size = new System.Drawing.Size(642, 138);
             this.usersDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -151,17 +201,66 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(311, 55);
+            this.groupBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Location = new System.Drawing.Point(405, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(249, 145);
+            this.groupBox1.Size = new System.Drawing.Size(182, 145);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select an action";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // bt_submit
+            // 
+            this.bt_submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bt_submit.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_submit.Location = new System.Drawing.Point(113, 89);
+            this.bt_submit.Name = "bt_submit";
+            this.bt_submit.Size = new System.Drawing.Size(59, 21);
+            this.bt_submit.TabIndex = 5;
+            this.bt_submit.Text = "Submit";
+            this.bt_submit.UseVisualStyleBackColor = true;
+            this.bt_submit.Click += new System.EventHandler(this.bt_submit_Click);
+            // 
+            // bt_delete
+            // 
+            this.bt_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bt_delete.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_delete.Location = new System.Drawing.Point(113, 62);
+            this.bt_delete.Name = "bt_delete";
+            this.bt_delete.Size = new System.Drawing.Size(59, 21);
+            this.bt_delete.TabIndex = 4;
+            this.bt_delete.Text = "Delete";
+            this.bt_delete.UseVisualStyleBackColor = true;
+            this.bt_delete.Click += new System.EventHandler(this.bt_delete_Click);
+            // 
+            // bt_create
+            // 
+            this.bt_create.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bt_create.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_create.Location = new System.Drawing.Point(113, 35);
+            this.bt_create.Name = "bt_create";
+            this.bt_create.Size = new System.Drawing.Size(59, 21);
+            this.bt_create.TabIndex = 3;
+            this.bt_create.Text = "Create";
+            this.bt_create.UseVisualStyleBackColor = true;
+            this.bt_create.Click += new System.EventHandler(this.bt_create_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(27, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Delete a record";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 96);
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(13, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 1;
@@ -170,59 +269,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 42);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(16, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add a new record";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(95, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Delete a record";
-            // 
-            // bt_create
-            // 
-            this.bt_create.Location = new System.Drawing.Point(181, 34);
-            this.bt_create.Name = "bt_create";
-            this.bt_create.Size = new System.Drawing.Size(59, 21);
-            this.bt_create.TabIndex = 3;
-            this.bt_create.Text = "Create";
-            this.bt_create.UseVisualStyleBackColor = true;
-            this.bt_create.Click += new System.EventHandler(this.bt_create_Click);
-            // 
-            // bt_delete
-            // 
-            this.bt_delete.Location = new System.Drawing.Point(181, 61);
-            this.bt_delete.Name = "bt_delete";
-            this.bt_delete.Size = new System.Drawing.Size(59, 21);
-            this.bt_delete.TabIndex = 4;
-            this.bt_delete.Text = "Delete";
-            this.bt_delete.UseVisualStyleBackColor = true;
-            this.bt_delete.Click += new System.EventHandler(this.bt_delete_Click);
-            // 
-            // bt_submit
-            // 
-            this.bt_submit.Location = new System.Drawing.Point(181, 88);
-            this.bt_submit.Name = "bt_submit";
-            this.bt_submit.Size = new System.Drawing.Size(59, 21);
-            this.bt_submit.TabIndex = 5;
-            this.bt_submit.Text = "Submit";
-            this.bt_submit.UseVisualStyleBackColor = true;
-            this.bt_submit.Click += new System.EventHandler(this.bt_submit_Click);
-            // 
-            // employeeIDLabel
-            // 
-            employeeIDLabel.AutoSize = true;
-            employeeIDLabel.Location = new System.Drawing.Point(43, 55);
-            employeeIDLabel.Name = "employeeIDLabel";
-            employeeIDLabel.Size = new System.Drawing.Size(70, 13);
-            employeeIDLabel.TabIndex = 2;
-            employeeIDLabel.Text = "Employee ID:";
             // 
             // employeeIDTextBox
             // 
@@ -232,15 +284,6 @@
             this.employeeIDTextBox.Size = new System.Drawing.Size(104, 20);
             this.employeeIDTextBox.TabIndex = 3;
             // 
-            // full_NameLabel
-            // 
-            full_NameLabel.AutoSize = true;
-            full_NameLabel.Location = new System.Drawing.Point(43, 81);
-            full_NameLabel.Name = "full_NameLabel";
-            full_NameLabel.Size = new System.Drawing.Size(57, 13);
-            full_NameLabel.TabIndex = 4;
-            full_NameLabel.Text = "Full Name:";
-            // 
             // full_NameTextBox
             // 
             this.full_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Full Name", true));
@@ -248,15 +291,6 @@
             this.full_NameTextBox.Name = "full_NameTextBox";
             this.full_NameTextBox.Size = new System.Drawing.Size(104, 20);
             this.full_NameTextBox.TabIndex = 5;
-            // 
-            // position_A_E_Label
-            // 
-            position_A_E_Label.AutoSize = true;
-            position_A_E_Label.Location = new System.Drawing.Point(43, 107);
-            position_A_E_Label.Name = "position_A_E_Label";
-            position_A_E_Label.Size = new System.Drawing.Size(72, 13);
-            position_A_E_Label.TabIndex = 6;
-            position_A_E_Label.Text = "Position(A\\E):";
             // 
             // position_A_E_TextBox
             // 
@@ -266,15 +300,6 @@
             this.position_A_E_TextBox.Size = new System.Drawing.Size(104, 20);
             this.position_A_E_TextBox.TabIndex = 7;
             // 
-            // usernameLabel
-            // 
-            usernameLabel.AutoSize = true;
-            usernameLabel.Location = new System.Drawing.Point(43, 133);
-            usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new System.Drawing.Size(58, 13);
-            usernameLabel.TabIndex = 8;
-            usernameLabel.Text = "Username:";
-            // 
             // usernameTextBox
             // 
             this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Username", true));
@@ -282,15 +307,6 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(104, 20);
             this.usernameTextBox.TabIndex = 9;
-            // 
-            // passwordLabel
-            // 
-            passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(43, 159);
-            passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(56, 13);
-            passwordLabel.TabIndex = 10;
-            passwordLabel.Text = "Password:";
             // 
             // passwordTextBox
             // 
@@ -303,6 +319,7 @@
             // activeCheckBox
             // 
             this.activeCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.usersBindingSource, "Active", true));
+            this.activeCheckBox.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.activeCheckBox.Location = new System.Drawing.Point(121, 182);
             this.activeCheckBox.Name = "activeCheckBox";
             this.activeCheckBox.Size = new System.Drawing.Size(104, 24);
@@ -314,7 +331,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.ClientSize = new System.Drawing.Size(666, 450);
             this.Controls.Add(employeeIDLabel);
             this.Controls.Add(this.employeeIDTextBox);
             this.Controls.Add(full_NameLabel);
