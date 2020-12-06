@@ -42,6 +42,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -58,7 +60,7 @@
             this.bt_AddAttendance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.bt_AddAttendance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_AddAttendance.Location = new System.Drawing.Point(2, 2);
-            this.bt_AddAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_AddAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.bt_AddAttendance.Name = "bt_AddAttendance";
             this.bt_AddAttendance.Size = new System.Drawing.Size(160, 40);
             this.bt_AddAttendance.TabIndex = 0;
@@ -72,7 +74,7 @@
             this.bt_RemoveAttendance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.bt_RemoveAttendance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_RemoveAttendance.Location = new System.Drawing.Point(2, 2);
-            this.bt_RemoveAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_RemoveAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.bt_RemoveAttendance.Name = "bt_RemoveAttendance";
             this.bt_RemoveAttendance.Size = new System.Drawing.Size(160, 40);
             this.bt_RemoveAttendance.TabIndex = 1;
@@ -86,7 +88,7 @@
             this.bt_TotalAttendance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.bt_TotalAttendance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_TotalAttendance.Location = new System.Drawing.Point(2, 2);
-            this.bt_TotalAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_TotalAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.bt_TotalAttendance.Name = "bt_TotalAttendance";
             this.bt_TotalAttendance.Size = new System.Drawing.Size(160, 40);
             this.bt_TotalAttendance.TabIndex = 2;
@@ -101,8 +103,8 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(37, 41);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Location = new System.Drawing.Point(38, 120);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(376, 415);
@@ -115,7 +117,7 @@
             this.lb_top.AutoSize = true;
             this.lb_top.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.lb_top.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_top.Location = new System.Drawing.Point(34, 7);
+            this.lb_top.Location = new System.Drawing.Point(35, 86);
             this.lb_top.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_top.Name = "lb_top";
             this.lb_top.Size = new System.Drawing.Size(142, 27);
@@ -128,7 +130,7 @@
             this.bt_update.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.bt_update.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_update.Location = new System.Drawing.Point(2, 2);
-            this.bt_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_update.Margin = new System.Windows.Forms.Padding(2);
             this.bt_update.Name = "bt_update";
             this.bt_update.Size = new System.Drawing.Size(160, 40);
             this.bt_update.TabIndex = 5;
@@ -141,7 +143,7 @@
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel3.Location = new System.Drawing.Point(439, 106);
+            this.panel3.Location = new System.Drawing.Point(440, 185);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(170, 50);
             this.panel3.TabIndex = 14;
@@ -161,7 +163,7 @@
             this.panel1.BackColor = System.Drawing.Color.Crimson;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel1.Location = new System.Drawing.Point(439, 184);
+            this.panel1.Location = new System.Drawing.Point(440, 263);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 50);
             this.panel1.TabIndex = 15;
@@ -181,7 +183,7 @@
             this.panel5.BackColor = System.Drawing.Color.Crimson;
             this.panel5.Controls.Add(this.panel6);
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel5.Location = new System.Drawing.Point(439, 258);
+            this.panel5.Location = new System.Drawing.Point(440, 337);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(170, 50);
             this.panel5.TabIndex = 16;
@@ -201,7 +203,7 @@
             this.panel7.BackColor = System.Drawing.Color.Crimson;
             this.panel7.Controls.Add(this.panel8);
             this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel7.Location = new System.Drawing.Point(439, 329);
+            this.panel7.Location = new System.Drawing.Point(440, 408);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(170, 50);
             this.panel7.TabIndex = 17;
@@ -216,19 +218,45 @@
             this.panel8.Size = new System.Drawing.Size(164, 44);
             this.panel8.TabIndex = 14;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(-3, -1);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(637, 26);
+            this.flowLayoutPanel1.TabIndex = 24;
+            this.flowLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
+            this.flowLayoutPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseMove);
+            this.flowLayoutPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseUp);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.label9.ForeColor = System.Drawing.Color.Crimson;
+            this.label9.Location = new System.Drawing.Point(591, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 29);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "X";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(633, 476);
+            this.ClientSize = new System.Drawing.Size(633, 603);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.lb_top);
             this.Controls.Add(this.listView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EmployeeForm";
             this.Text = "Employee Screen";
             this.Load += new System.EventHandler(this.EmployeeForm_Load);
@@ -261,5 +289,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label9;
     }
 }

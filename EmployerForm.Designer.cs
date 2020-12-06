@@ -184,6 +184,7 @@
             this.label9.Size = new System.Drawing.Size(30, 29);
             this.label9.TabIndex = 25;
             this.label9.Text = "X";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // AdminPage
             // 

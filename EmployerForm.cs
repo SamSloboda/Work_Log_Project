@@ -65,6 +65,11 @@ namespace Work_Log_Project
             mouseDown = false;
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void flowLayoutPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
