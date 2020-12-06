@@ -128,13 +128,13 @@ namespace Work_Log_Project
 
         {
             //SAM's connection string bellow
-           // public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Sam Sloboda\\source\\repos\\Work_Log_Project\\db_WorkLog.mdf;Integrated Security = True";
+            // public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Sam Sloboda\\source\\repos\\Work_Log_Project\\db_WorkLog.mdf;Integrated Security = True";
 
             //MOMO's connection string bellow
-            //public static String connectionString = "INSERT YOUR CONNECTION STRING HERE";
-
+            public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Dell\\Source\\Repos\\SamSloboda\\Work_Log_Project\\db_WorkLog.mdf;Integrated Security = True";
+            
             //SAMON's connection string bellow
-            public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\samon\\Desktop\\CIS302LastAssignment\\db_WorkLog.mdf;Integrated Security = True";
+            //public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\samon\\Desktop\\CIS302LastAssignment\\db_WorkLog.mdf;Integrated Security = True";
 
             DatabaseConnect() { }
         }
