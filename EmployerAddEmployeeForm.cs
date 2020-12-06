@@ -26,5 +26,15 @@ namespace Work_Log_Project
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmployerAddEmployeeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
