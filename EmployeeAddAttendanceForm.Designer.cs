@@ -72,48 +72,48 @@
             this.lb_startWork.AutoSize = true;
             this.lb_startWork.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.lb_startWork.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_startWork.Location = new System.Drawing.Point(10, 10);
+            this.lb_startWork.Location = new System.Drawing.Point(11, 10);
             this.lb_startWork.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_startWork.Name = "lb_startWork";
-            this.lb_startWork.Size = new System.Drawing.Size(170, 27);
+            this.lb_startWork.Size = new System.Drawing.Size(184, 27);
             this.lb_startWork.TabIndex = 2;
-            this.lb_startWork.Text = "Started working:";
+            this.lb_startWork.Text = "~Started working~";
             // 
             // lb_lenghtOfLunchBreak
             // 
             this.lb_lenghtOfLunchBreak.AutoSize = true;
             this.lb_lenghtOfLunchBreak.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.lb_lenghtOfLunchBreak.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_lenghtOfLunchBreak.Location = new System.Drawing.Point(7, 9);
+            this.lb_lenghtOfLunchBreak.Location = new System.Drawing.Point(19, 9);
             this.lb_lenghtOfLunchBreak.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_lenghtOfLunchBreak.Name = "lb_lenghtOfLunchBreak";
-            this.lb_lenghtOfLunchBreak.Size = new System.Drawing.Size(222, 27);
+            this.lb_lenghtOfLunchBreak.Size = new System.Drawing.Size(236, 27);
             this.lb_lenghtOfLunchBreak.TabIndex = 3;
-            this.lb_lenghtOfLunchBreak.Text = "Length of Lunchbreak:";
+            this.lb_lenghtOfLunchBreak.Text = "~Length of Lunchbreak~";
             // 
             // lb_otherBreakLength
             // 
             this.lb_otherBreakLength.AutoSize = true;
             this.lb_otherBreakLength.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.lb_otherBreakLength.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_otherBreakLength.Location = new System.Drawing.Point(7, 14);
+            this.lb_otherBreakLength.Location = new System.Drawing.Point(19, 11);
             this.lb_otherBreakLength.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_otherBreakLength.Name = "lb_otherBreakLength";
-            this.lb_otherBreakLength.Size = new System.Drawing.Size(236, 27);
+            this.lb_otherBreakLength.Size = new System.Drawing.Size(250, 27);
             this.lb_otherBreakLength.TabIndex = 4;
-            this.lb_otherBreakLength.Text = "Length of Other Breaks:";
+            this.lb_otherBreakLength.Text = "~Length of Other Breaks~";
             // 
             // lb_endWork
             // 
             this.lb_endWork.AutoSize = true;
             this.lb_endWork.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.lb_endWork.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_endWork.Location = new System.Drawing.Point(12, 13);
+            this.lb_endWork.Location = new System.Drawing.Point(22, 9);
             this.lb_endWork.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_endWork.Name = "lb_endWork";
-            this.lb_endWork.Size = new System.Drawing.Size(158, 27);
+            this.lb_endWork.Size = new System.Drawing.Size(172, 27);
             this.lb_endWork.TabIndex = 5;
-            this.lb_endWork.Text = "Ended working:";
+            this.lb_endWork.Text = "~Ended working~";
             // 
             // bt_submit
             // 
@@ -161,7 +161,7 @@
             this.dt_startTime.CalendarFont = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.dt_startTime.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.dt_startTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dt_startTime.Location = new System.Drawing.Point(391, 5);
+            this.dt_startTime.Location = new System.Drawing.Point(396, 5);
             this.dt_startTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dt_startTime.Name = "dt_startTime";
             this.dt_startTime.Size = new System.Drawing.Size(154, 32);
@@ -171,7 +171,7 @@
             // 
             this.dt_endTime.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.dt_endTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dt_endTime.Location = new System.Drawing.Point(384, 13);
+            this.dt_endTime.Location = new System.Drawing.Point(407, 9);
             this.dt_endTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dt_endTime.Name = "dt_endTime";
             this.dt_endTime.Size = new System.Drawing.Size(154, 32);
@@ -180,7 +180,7 @@
             // ud_lunchBreak
             // 
             this.ud_lunchBreak.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
-            this.ud_lunchBreak.Location = new System.Drawing.Point(391, 7);
+            this.ud_lunchBreak.Location = new System.Drawing.Point(404, 7);
             this.ud_lunchBreak.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ud_lunchBreak.Maximum = new decimal(new int[] {
             59,
@@ -194,7 +194,7 @@
             // ud_otherBreaks
             // 
             this.ud_otherBreaks.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
-            this.ud_otherBreaks.Location = new System.Drawing.Point(391, 9);
+            this.ud_otherBreaks.Location = new System.Drawing.Point(404, 9);
             this.ud_otherBreaks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ud_otherBreaks.Maximum = new decimal(new int[] {
             59,
@@ -210,7 +210,7 @@
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel3.Location = new System.Drawing.Point(12, 406);
+            this.panel3.Location = new System.Drawing.Point(12, 385);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(170, 50);
             this.panel3.TabIndex = 19;
@@ -230,7 +230,7 @@
             this.panel1.BackColor = System.Drawing.Color.Crimson;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel1.Location = new System.Drawing.Point(199, 406);
+            this.panel1.Location = new System.Drawing.Point(199, 385);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 50);
             this.panel1.TabIndex = 20;
@@ -250,7 +250,7 @@
             this.panel5.BackColor = System.Drawing.Color.Crimson;
             this.panel5.Controls.Add(this.panel6);
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel5.Location = new System.Drawing.Point(386, 406);
+            this.panel5.Location = new System.Drawing.Point(386, 385);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(170, 50);
             this.panel5.TabIndex = 21;
