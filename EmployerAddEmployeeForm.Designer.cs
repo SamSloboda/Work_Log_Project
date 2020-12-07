@@ -422,7 +422,7 @@
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel3.Location = new System.Drawing.Point(12, 589);
+            this.panel3.Location = new System.Drawing.Point(344, 589);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(137, 50);
             this.panel3.TabIndex = 14;
@@ -462,7 +462,7 @@
             this.panel5.BackColor = System.Drawing.Color.Crimson;
             this.panel5.Controls.Add(this.panel6);
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel5.Location = new System.Drawing.Point(344, 589);
+            this.panel5.Location = new System.Drawing.Point(12, 589);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(137, 50);
             this.panel5.TabIndex = 16;

@@ -58,7 +58,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(857, 339);
+            this.dataGridView1.Size = new System.Drawing.Size(1019, 339);
             this.dataGridView1.TabIndex = 0;
             // 
             // bt_addEmployee
@@ -108,7 +108,7 @@
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel3.Location = new System.Drawing.Point(348, 434);
+            this.panel3.Location = new System.Drawing.Point(432, 431);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(170, 50);
             this.panel3.TabIndex = 14;
@@ -128,7 +128,7 @@
             this.panel1.BackColor = System.Drawing.Color.Crimson;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel1.Location = new System.Drawing.Point(697, 434);
+            this.panel1.Location = new System.Drawing.Point(728, 431);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 50);
             this.panel1.TabIndex = 15;
@@ -148,7 +148,7 @@
             this.panel5.BackColor = System.Drawing.Color.Crimson;
             this.panel5.Controls.Add(this.panel6);
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel5.Location = new System.Drawing.Point(12, 434);
+            this.panel5.Location = new System.Drawing.Point(136, 431);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(170, 50);
             this.panel5.TabIndex = 16;
@@ -167,7 +167,7 @@
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(-2, -3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(884, 27);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1046, 27);
             this.flowLayoutPanel1.TabIndex = 24;
             this.flowLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
             this.flowLayoutPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseMove);
@@ -179,7 +179,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.label9.ForeColor = System.Drawing.Color.Crimson;
-            this.label9.Location = new System.Drawing.Point(839, 9);
+            this.label9.Location = new System.Drawing.Point(1000, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 29);
             this.label9.TabIndex = 25;
@@ -191,7 +191,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(881, 517);
+            this.ClientSize = new System.Drawing.Size(1042, 517);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel5);

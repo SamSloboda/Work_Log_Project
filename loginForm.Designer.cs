@@ -90,12 +90,12 @@
             // 
             this.tb_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
             this.tb_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_username.Font = new System.Drawing.Font("Trebuchet MS", 20.25F);
+            this.tb_username.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tb_username.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tb_username.Location = new System.Drawing.Point(35, 12);
+            this.tb_username.Location = new System.Drawing.Point(35, 19);
             this.tb_username.MaxLength = 10;
             this.tb_username.Name = "tb_username";
-            this.tb_username.Size = new System.Drawing.Size(348, 32);
+            this.tb_username.Size = new System.Drawing.Size(348, 25);
             this.tb_username.TabIndex = 0;
             // 
             // tb_password
