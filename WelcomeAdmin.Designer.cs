@@ -40,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bt_edit = new System.Windows.Forms.Button();
             this.bt_Signout = new System.Windows.Forms.Button();
+            this.lb_welcome = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -133,7 +134,6 @@
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Edit Users";
-           
             // 
             // bt_edit
             // 
@@ -154,11 +154,20 @@
             this.bt_Signout.Text = "Sign out";
             this.bt_Signout.UseVisualStyleBackColor = true;
             // 
+            // lb_welcome
+            // 
+            this.lb_welcome.AutoSize = true;
+            this.lb_welcome.Location = new System.Drawing.Point(87, 40);
+            this.lb_welcome.Name = "lb_welcome";
+            this.lb_welcome.Size = new System.Drawing.Size(0, 13);
+            this.lb_welcome.TabIndex = 12;
+            // 
             // WelcomeAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 398);
+            this.Controls.Add(this.lb_welcome);
             this.Controls.Add(this.bt_Signout);
             this.Controls.Add(this.bt_edit);
             this.Controls.Add(this.label4);
@@ -192,5 +201,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button bt_edit;
         private System.Windows.Forms.Button bt_Signout;
+        private System.Windows.Forms.Label lb_welcome;
     }
 }

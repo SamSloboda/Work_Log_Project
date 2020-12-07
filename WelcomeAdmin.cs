@@ -15,9 +15,10 @@ namespace Work_Log_Project
         public WelcomeAdmin()
         {
             InitializeComponent();
+            lb_welcome.Text = userClass.username + "!";
         }
 
-       
+     
 
         private void bt_add_Click(object sender, EventArgs e)
         {

@@ -37,19 +37,19 @@
             this.tb_firstname = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_middleName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tb_lastname = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tb_confirmpassword = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_username = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb_password = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.bt_admin = new System.Windows.Forms.CheckBox();
@@ -67,6 +67,11 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
+            this.lb_alert = new System.Windows.Forms.Label();
+            this.lb_alert2 = new System.Windows.Forms.Label();
+            this.lb_namealert = new System.Windows.Forms.Label();
+            this.lb_namealert2 = new System.Windows.Forms.Label();
+            this.lb_namealert3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -98,6 +103,7 @@
             this.bt_submit.TabIndex = 0;
             this.bt_submit.Text = "Submit";
             this.bt_submit.UseVisualStyleBackColor = true;
+            this.bt_submit.Click += new System.EventHandler(this.bt_submit_Click);
             // 
             // bt_clear
             // 
@@ -111,6 +117,7 @@
             this.bt_clear.TabIndex = 1;
             this.bt_clear.Text = "Clear";
             this.bt_clear.UseVisualStyleBackColor = true;
+            this.bt_clear.Click += new System.EventHandler(this.bt_clear_Click);
             // 
             // bt_exit
             // 
@@ -134,7 +141,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox1.Location = new System.Drawing.Point(44, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(404, 177);
+            this.groupBox1.Size = new System.Drawing.Size(422, 177);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Information";
@@ -143,6 +150,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
+            this.panel7.Controls.Add(this.lb_namealert);
             this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.tb_firstname);
             this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
@@ -177,7 +185,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
             this.panel8.Controls.Add(this.label8);
-            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.tb_middleName);
             this.panel8.Controls.Add(this.label2);
             this.panel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
             this.panel8.Location = new System.Drawing.Point(0, 82);
@@ -196,16 +204,16 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "(Optional)";
             // 
-            // textBox1
+            // tb_middleName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Crimson;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.textBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(184, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 19);
-            this.textBox1.TabIndex = 3;
+            this.tb_middleName.BackColor = System.Drawing.Color.Crimson;
+            this.tb_middleName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_middleName.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.tb_middleName.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_middleName.Location = new System.Drawing.Point(184, 8);
+            this.tb_middleName.Name = "tb_middleName";
+            this.tb_middleName.Size = new System.Drawing.Size(121, 19);
+            this.tb_middleName.TabIndex = 3;
             // 
             // label2
             // 
@@ -248,7 +256,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox2.Location = new System.Drawing.Point(44, 250);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(404, 177);
+            this.groupBox2.Size = new System.Drawing.Size(422, 177);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Credentials";
@@ -257,7 +265,7 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
             this.panel12.Controls.Add(this.label6);
-            this.panel12.Controls.Add(this.textBox4);
+            this.panel12.Controls.Add(this.tb_confirmpassword);
             this.panel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
             this.panel12.Location = new System.Drawing.Point(0, 136);
             this.panel12.Name = "panel12";
@@ -275,21 +283,21 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Confirm Password:";
             // 
-            // textBox4
+            // tb_confirmpassword
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Crimson;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.textBox4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox4.Location = new System.Drawing.Point(225, 9);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 19);
-            this.textBox4.TabIndex = 5;
+            this.tb_confirmpassword.BackColor = System.Drawing.Color.Crimson;
+            this.tb_confirmpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_confirmpassword.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.tb_confirmpassword.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_confirmpassword.Location = new System.Drawing.Point(225, 9);
+            this.tb_confirmpassword.Name = "tb_confirmpassword";
+            this.tb_confirmpassword.Size = new System.Drawing.Size(149, 19);
+            this.tb_confirmpassword.TabIndex = 5;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel10.Controls.Add(this.textBox2);
+            this.panel10.Controls.Add(this.tb_username);
             this.panel10.Controls.Add(this.label4);
             this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
             this.panel10.Location = new System.Drawing.Point(0, 31);
@@ -297,16 +305,16 @@
             this.panel10.Size = new System.Drawing.Size(404, 35);
             this.panel10.TabIndex = 15;
             // 
-            // textBox2
+            // tb_username
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Crimson;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.textBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Location = new System.Drawing.Point(225, 8);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 19);
-            this.textBox2.TabIndex = 1;
+            this.tb_username.BackColor = System.Drawing.Color.Crimson;
+            this.tb_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_username.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.tb_username.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_username.Location = new System.Drawing.Point(225, 8);
+            this.tb_username.Name = "tb_username";
+            this.tb_username.Size = new System.Drawing.Size(149, 19);
+            this.tb_username.TabIndex = 1;
             // 
             // label4
             // 
@@ -330,16 +338,16 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Password:";
             // 
-            // textBox3
+            // tb_password
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Crimson;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.textBox3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.Location = new System.Drawing.Point(225, 9);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 19);
-            this.textBox3.TabIndex = 2;
+            this.tb_password.BackColor = System.Drawing.Color.Crimson;
+            this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_password.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.tb_password.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_password.Location = new System.Drawing.Point(225, 9);
+            this.tb_password.Name = "tb_password";
+            this.tb_password.Size = new System.Drawing.Size(149, 19);
+            this.tb_password.TabIndex = 2;
             // 
             // groupBox3
             // 
@@ -349,7 +357,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox3.Location = new System.Drawing.Point(44, 443);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(404, 120);
+            this.groupBox3.Size = new System.Drawing.Size(422, 120);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Accessibility";
@@ -480,19 +488,21 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
+            this.panel9.Controls.Add(this.lb_namealert2);
             this.panel9.Controls.Add(this.tb_lastname);
             this.panel9.Controls.Add(this.label3);
             this.panel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
             this.panel9.Location = new System.Drawing.Point(44, 192);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(404, 35);
+            this.panel9.Size = new System.Drawing.Size(422, 35);
             this.panel9.TabIndex = 14;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
+            this.panel11.Controls.Add(this.lb_alert);
             this.panel11.Controls.Add(this.label5);
-            this.panel11.Controls.Add(this.textBox3);
+            this.panel11.Controls.Add(this.tb_password);
             this.panel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
             this.panel11.Location = new System.Drawing.Point(44, 335);
             this.panel11.Name = "panel11";
@@ -522,12 +532,72 @@
             this.label9.Text = "X";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // lb_alert
+            // 
+            this.lb_alert.AutoSize = true;
+            this.lb_alert.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_alert.ForeColor = System.Drawing.Color.Red;
+            this.lb_alert.Location = new System.Drawing.Point(369, 2);
+            this.lb_alert.Name = "lb_alert";
+            this.lb_alert.Size = new System.Drawing.Size(37, 33);
+            this.lb_alert.TabIndex = 4;
+            this.lb_alert.Text = "**";
+            this.lb_alert.Visible = false;
+            // 
+            // lb_alert2
+            // 
+            this.lb_alert2.AutoSize = true;
+            this.lb_alert2.ForeColor = System.Drawing.Color.Red;
+            this.lb_alert2.Location = new System.Drawing.Point(299, 430);
+            this.lb_alert2.Name = "lb_alert2";
+            this.lb_alert2.Size = new System.Drawing.Size(151, 13);
+            this.lb_alert2.TabIndex = 25;
+            this.lb_alert2.Text = "** Passwords are not matching";
+            this.lb_alert2.Visible = false;
+            // 
+            // lb_namealert
+            // 
+            this.lb_namealert.AutoSize = true;
+            this.lb_namealert.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_namealert.ForeColor = System.Drawing.Color.Red;
+            this.lb_namealert.Location = new System.Drawing.Point(320, 2);
+            this.lb_namealert.Name = "lb_namealert";
+            this.lb_namealert.Size = new System.Drawing.Size(37, 33);
+            this.lb_namealert.TabIndex = 5;
+            this.lb_namealert.Text = "**";
+            this.lb_namealert.Visible = false;
+            // 
+            // lb_namealert2
+            // 
+            this.lb_namealert2.AutoSize = true;
+            this.lb_namealert2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_namealert2.ForeColor = System.Drawing.Color.Red;
+            this.lb_namealert2.Location = new System.Drawing.Point(320, 2);
+            this.lb_namealert2.Name = "lb_namealert2";
+            this.lb_namealert2.Size = new System.Drawing.Size(37, 33);
+            this.lb_namealert2.TabIndex = 6;
+            this.lb_namealert2.Text = "**";
+            this.lb_namealert2.Visible = false;
+            // 
+            // lb_namealert3
+            // 
+            this.lb_namealert3.AutoSize = true;
+            this.lb_namealert3.ForeColor = System.Drawing.Color.Red;
+            this.lb_namealert3.Location = new System.Drawing.Point(339, 236);
+            this.lb_namealert3.Name = "lb_namealert3";
+            this.lb_namealert3.Size = new System.Drawing.Size(127, 13);
+            this.lb_namealert3.TabIndex = 26;
+            this.lb_namealert3.Text = "** Duplicate users found! ";
+            this.lb_namealert3.Visible = false;
+            // 
             // EmployerAddEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(493, 688);
+            this.ClientSize = new System.Drawing.Size(516, 673);
+            this.Controls.Add(this.lb_namealert3);
+            this.Controls.Add(this.lb_alert2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel9);
@@ -581,17 +651,17 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_lastname;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_middleName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_firstname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tb_confirmpassword;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_password;
+        private System.Windows.Forms.TextBox tb_username;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox bt_active;
         private System.Windows.Forms.Label activatelabel;
@@ -614,5 +684,10 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lb_alert;
+        private System.Windows.Forms.Label lb_alert2;
+        private System.Windows.Forms.Label lb_namealert;
+        private System.Windows.Forms.Label lb_namealert2;
+        private System.Windows.Forms.Label lb_namealert3;
     }
 }

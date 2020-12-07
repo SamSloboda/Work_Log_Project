@@ -80,8 +80,8 @@ namespace Work_Log_Project
                         MessageBox.Show("You have logged in successfully as: Admin " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tb_password.Text = "";
                         ///showing employerForm
-                        AdminPage employerForm = new AdminPage();
-                        employerForm.ShowDialog();
+                       // AdminPage employerForm = new AdminPage();
+                       // employerForm.ShowDialog();
                         WelcomeAdmin form = new WelcomeAdmin();
                         form.ShowDialog();
                     }
@@ -91,8 +91,9 @@ namespace Work_Log_Project
                         MessageBox.Show("You have logged in successfully as: User " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tb_password.Text = "";
                         ///showing employeeForm
-                        EmployeeForm employeeForm = new EmployeeForm();
-                        employeeForm.ShowDialog();
+                        
+                       EmployeeForm employeeForm = new EmployeeForm();
+                       employeeForm.ShowDialog();
                     }
                 }
                 else 
@@ -131,10 +132,10 @@ namespace Work_Log_Project
             // public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Sam Sloboda\\source\\repos\\Work_Log_Project\\db_WorkLog.mdf;Integrated Security = True";
 
             //MOMO's connection string bellow
-            public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Dell\\Source\\Repos\\SamSloboda\\Work_Log_Project\\db_WorkLog.mdf;Integrated Security = True";
+            //public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Dell\\Source\\Repos\\SamSloboda\\Work_Log_Project\\db_WorkLog.mdf;Integrated Security = True";
             
             //SAMON's connection string bellow
-            //public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\samon\\Desktop\\CIS302LastAssignment\\db_WorkLog.mdf;Integrated Security = True";
+            public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\samon\\Desktop\\CIS302LastAssignment\\db_WorkLog.mdf;Integrated Security = True";
 
             DatabaseConnect() { }
         }
