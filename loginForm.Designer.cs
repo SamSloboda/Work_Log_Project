@@ -41,6 +41,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.lb_close = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -192,12 +194,30 @@
             this.flowLayoutPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseMove);
             this.flowLayoutPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseUp);
             // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.panel16.Location = new System.Drawing.Point(0, 525);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(412, 31);
+            this.panel16.TabIndex = 39;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Crimson;
+            this.panel15.Location = new System.Drawing.Point(0, 549);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(412, 10);
+            this.panel15.TabIndex = 38;
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(412, 559);
+            this.Controls.Add(this.panel16);
+            this.Controls.Add(this.panel15);
             this.Controls.Add(this.lb_close);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);
@@ -238,6 +258,8 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lb_close;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
     }
 }
 

@@ -37,6 +37,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -89,7 +91,7 @@
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel3.Location = new System.Drawing.Point(30, 415);
+            this.panel3.Location = new System.Drawing.Point(33, 413);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(212, 50);
             this.panel3.TabIndex = 14;
@@ -109,7 +111,7 @@
             this.panel1.BackColor = System.Drawing.Color.Crimson;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel1.Location = new System.Drawing.Point(278, 415);
+            this.panel1.Location = new System.Drawing.Point(281, 413);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 50);
             this.panel1.TabIndex = 15;
@@ -147,12 +149,30 @@
             this.label9.Text = "X";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.panel16.Location = new System.Drawing.Point(0, 484);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(486, 19);
+            this.panel16.TabIndex = 39;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Crimson;
+            this.panel15.Location = new System.Drawing.Point(0, 496);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(486, 10);
+            this.panel15.TabIndex = 38;
+            // 
             // EmployeeRemoveAttendaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(483, 510);
+            this.Controls.Add(this.panel16);
+            this.Controls.Add(this.panel15);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
@@ -183,5 +203,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
     }
 }

@@ -44,6 +44,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -241,12 +243,30 @@
             this.label9.Text = "X";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.panel16.Location = new System.Drawing.Point(-3, 566);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(637, 34);
+            this.panel16.TabIndex = 39;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Crimson;
+            this.panel15.Location = new System.Drawing.Point(-3, 593);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(637, 10);
+            this.panel15.TabIndex = 38;
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(633, 603);
+            this.Controls.Add(this.panel16);
+            this.Controls.Add(this.panel15);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel7);
@@ -291,5 +311,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
     }
 }
