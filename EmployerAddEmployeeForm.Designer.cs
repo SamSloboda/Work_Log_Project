@@ -67,6 +67,8 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -422,7 +424,7 @@
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel3.Location = new System.Drawing.Point(344, 589);
+            this.panel3.Location = new System.Drawing.Point(344, 585);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(137, 50);
             this.panel3.TabIndex = 14;
@@ -442,7 +444,7 @@
             this.panel1.BackColor = System.Drawing.Color.Crimson;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel1.Location = new System.Drawing.Point(178, 589);
+            this.panel1.Location = new System.Drawing.Point(179, 585);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(137, 50);
             this.panel1.TabIndex = 15;
@@ -462,7 +464,7 @@
             this.panel5.BackColor = System.Drawing.Color.Crimson;
             this.panel5.Controls.Add(this.panel6);
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel5.Location = new System.Drawing.Point(12, 589);
+            this.panel5.Location = new System.Drawing.Point(12, 585);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(137, 50);
             this.panel5.TabIndex = 16;
@@ -522,12 +524,30 @@
             this.label9.Text = "X";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.panel16.Location = new System.Drawing.Point(0, 662);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(497, 23);
+            this.panel16.TabIndex = 39;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Crimson;
+            this.panel15.Location = new System.Drawing.Point(0, 678);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(497, 10);
+            this.panel15.TabIndex = 38;
+            // 
             // EmployerAddEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(493, 688);
+            this.Controls.Add(this.panel16);
+            this.Controls.Add(this.panel15);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel9);
@@ -614,5 +634,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
     }
 }
