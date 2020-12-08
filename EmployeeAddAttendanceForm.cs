@@ -41,36 +41,100 @@ namespace Work_Log_Project
             int totalBreak = (int)(ud_lunchBreak.Value + ud_otherBreaks.Value);
             bool activeLog = true; ///make the log active as we add it
 
-            ///creating connection and command
-            String constr = loginForm.DatabaseConnect.connectionString;
-            SqlConnection con = new SqlConnection(constr);
-            SqlCommand cmd = con.CreateCommand();
-            try
+
+            if (startTime.Date == endTime.Date)
             {
-                //creating  queery and executing the command
-                string query = "insert into TimeLog (employee_id, startTime, endTime, breakTime, activeLog) values('"+ userClass.employee_id + "','" + startTime + "','" + endTime + "','" + totalBreak + "', '"+ activeLog +"')";
-                cmd.CommandText = query;
-                con.Open();
-                
-                ///creating flag to see if the insertion went smooth
-                Int32 returnFlag = (Int32)cmd.ExecuteNonQuery();
-                if (returnFlag > 0)
-                    MessageBox.Show("Inserted Successfully");
-                else
-                    MessageBox.Show("Something went wrong");
+                if (endTime.Date <= DateTime.Now.Date)
+                {
+                    if (endTime.Date == DateTime.Now.Date)
+                    {
+                        ///creating connection and command
+                        String constr = loginForm.DatabaseConnect.connectionString;
+                        SqlConnection con = new SqlConnection(constr);
+                        SqlCommand cmd = con.CreateCommand();
+                        try
+                        {
+                            //creating  queery and executing the command
+                            string query = "insert into TimeLog (employee_id, startTime, endTime, breakTime, activeLog) values('" + userClass.employee_id + "','" + startTime + "','" + endTime + "','" + totalBreak + "', '" + activeLog + "')";
+                            cmd.CommandText = query;
+                            con.Open();
+
+                            ///creating flag to see if the insertion went smooth
+                            Int32 returnFlag = (Int32)cmd.ExecuteNonQuery();
+                            if (returnFlag > 0)
+                                MessageBox.Show("Inserted Successfully");
+                            else
+                                MessageBox.Show("Something went wrong");
 
 
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message.ToString());
+                        }
+                        finally
+                        {
+                            cmd.Dispose();
+                            con.Close();
+
+
+                        }
+                    }
+                    else 
+                    {
+                        string mess = "Are you sure you want to add log into the past?";
+                        string cap = "Adding Log Entry to  the Past";
+                        DialogResult result = MessageBox.Show(this, mess, cap, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes) 
+                        {
+                            ///creating connection and command
+                            String constr = loginForm.DatabaseConnect.connectionString;
+                            SqlConnection con = new SqlConnection(constr);
+                            SqlCommand cmd = con.CreateCommand();
+                            try
+                            {
+                                //creating  queery and executing the command
+                                string query = "insert into TimeLog (employee_id, startTime, endTime, breakTime, activeLog) values('" + userClass.employee_id + "','" + startTime + "','" + endTime + "','" + totalBreak + "', '" + activeLog + "')";
+                                cmd.CommandText = query;
+                                con.Open();
+
+                                ///creating flag to see if the insertion went smooth
+                                Int32 returnFlag = (Int32)cmd.ExecuteNonQuery();
+                                if (returnFlag > 0)
+                                    MessageBox.Show("Inserted Successfully");
+                                else
+                                    MessageBox.Show("Something went wrong");
+
+
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message.ToString());
+                            }
+                            finally
+                            {
+                                cmd.Dispose();
+                                con.Close();
+
+
+                            }
+
+                        }
+                    }
+                }
+                else 
+                {
+                    string mess = "Please select the valid date.";
+                    string cap = "Can't Add Time Log to The Future";
+                    MessageBox.Show(this, mess, cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            catch (Exception ex)
+            else 
             {
-                MessageBox.Show(ex.Message.ToString());
-            }
-            finally
-            {
-                cmd.Dispose();
-                con.Close();
-
-
+                string mess = "Please select the same date for starting of working and end of working.";
+                string cap = "More Than 24 Hours Working Log  Error";
+                MessageBox.Show(this,mess,cap,MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
 
 
