@@ -38,7 +38,8 @@ namespace Work_Log_Project
 
         private void bt_edit_Click(object sender, EventArgs e)
         {
-
+            EditUserForm formm = new EditUserForm();
+            formm.ShowDialog();
         }
 
         private void bt_Signout_Click(object sender, EventArgs e)
