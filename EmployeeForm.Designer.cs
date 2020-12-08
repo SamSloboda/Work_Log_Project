@@ -59,7 +59,7 @@
             // bt_AddAttendance
             // 
             this.bt_AddAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_AddAttendance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
+            this.bt_AddAttendance.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.bt_AddAttendance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_AddAttendance.Location = new System.Drawing.Point(2, 2);
             this.bt_AddAttendance.Margin = new System.Windows.Forms.Padding(2);
@@ -73,8 +73,9 @@
             // bt_RemoveAttendance
             // 
             this.bt_RemoveAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_RemoveAttendance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
+            this.bt_RemoveAttendance.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bt_RemoveAttendance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_RemoveAttendance.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_RemoveAttendance.Location = new System.Drawing.Point(2, 2);
             this.bt_RemoveAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.bt_RemoveAttendance.Name = "bt_RemoveAttendance";
@@ -87,7 +88,7 @@
             // bt_TotalAttendance
             // 
             this.bt_TotalAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_TotalAttendance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
+            this.bt_TotalAttendance.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.bt_TotalAttendance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_TotalAttendance.Location = new System.Drawing.Point(2, 2);
             this.bt_TotalAttendance.Margin = new System.Windows.Forms.Padding(2);
@@ -100,6 +101,7 @@
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listView1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.listView1.FullRowSelect = true;
@@ -129,7 +131,7 @@
             // bt_update
             // 
             this.bt_update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_update.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
+            this.bt_update.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.bt_update.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_update.Location = new System.Drawing.Point(2, 2);
             this.bt_update.Margin = new System.Windows.Forms.Padding(2);
