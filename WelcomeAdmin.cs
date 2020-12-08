@@ -26,9 +26,10 @@ namespace Work_Log_Project
             newForm.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bt_delete_Click(object sender, EventArgs e)
         {
-
+            RemoveEmployee form =new RemoveEmployee();
+            form.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,6 +38,23 @@ namespace Work_Log_Project
         }
 
         private void bt_edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_Signout_Click(object sender, EventArgs e)
+        {
+            loginForm form = new loginForm();
+            form.ShowDialog();
+        }
+
+        private void bt_delete_Click_1(object sender, EventArgs e)
+        {
+            RemoveEmployee form = new RemoveEmployee();
+            form.ShowDialog();
+        }
+
+        private void WelcomeAdmin_Load(object sender, EventArgs e)
         {
 
         }

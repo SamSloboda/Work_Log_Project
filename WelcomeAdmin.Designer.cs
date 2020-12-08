@@ -105,7 +105,7 @@
             this.bt_delete.TabIndex = 6;
             this.bt_delete.Text = "Delete";
             this.bt_delete.UseVisualStyleBackColor = true;
-            this.bt_delete.Click += new System.EventHandler(this.button1_Click);
+            this.bt_delete.Click += new System.EventHandler(this.bt_delete_Click_1);
             // 
             // label3
             // 
@@ -153,6 +153,7 @@
             this.bt_Signout.TabIndex = 11;
             this.bt_Signout.Text = "Sign out";
             this.bt_Signout.UseVisualStyleBackColor = true;
+            this.bt_Signout.Click += new System.EventHandler(this.bt_Signout_Click);
             // 
             // lb_welcome
             // 
@@ -182,6 +183,7 @@
             this.Controls.Add(this.label1);
             this.Name = "WelcomeAdmin";
             this.Text = "WelcomeAdmin";
+            this.Load += new System.EventHandler(this.WelcomeAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
