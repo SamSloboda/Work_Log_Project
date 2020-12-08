@@ -42,8 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tb_lastname = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lb_alert2 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.lb_alert2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tb_confirmpassword = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -63,8 +63,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.lb_namealert3 = new System.Windows.Forms.Label();
             this.lb_namealert2 = new System.Windows.Forms.Label();
+            this.lb_namealert3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.lb_alert = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -256,18 +256,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Credentials";
             // 
-            // lb_alert2
-            // 
-            this.lb_alert2.AutoSize = true;
-            this.lb_alert2.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lb_alert2.ForeColor = System.Drawing.Color.Red;
-            this.lb_alert2.Location = new System.Drawing.Point(314, 11);
-            this.lb_alert2.Name = "lb_alert2";
-            this.lb_alert2.Size = new System.Drawing.Size(160, 16);
-            this.lb_alert2.TabIndex = 8;
-            this.lb_alert2.Text = "**The password should match!!";
-            this.lb_alert2.Visible = false;
-            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
@@ -279,6 +267,18 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(477, 35);
             this.panel12.TabIndex = 17;
+            // 
+            // lb_alert2
+            // 
+            this.lb_alert2.AutoSize = true;
+            this.lb_alert2.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb_alert2.ForeColor = System.Drawing.Color.Red;
+            this.lb_alert2.Location = new System.Drawing.Point(314, 11);
+            this.lb_alert2.Name = "lb_alert2";
+            this.lb_alert2.Size = new System.Drawing.Size(160, 16);
+            this.lb_alert2.TabIndex = 8;
+            this.lb_alert2.Text = "**The password should match!!";
+            this.lb_alert2.Visible = false;
             // 
             // label6
             // 
@@ -486,18 +486,6 @@
             this.panel9.Size = new System.Drawing.Size(477, 36);
             this.panel9.TabIndex = 14;
             // 
-            // lb_namealert3
-            // 
-            this.lb_namealert3.AutoSize = true;
-            this.lb_namealert3.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lb_namealert3.ForeColor = System.Drawing.Color.Red;
-            this.lb_namealert3.Location = new System.Drawing.Point(324, 13);
-            this.lb_namealert3.Name = "lb_namealert3";
-            this.lb_namealert3.Size = new System.Drawing.Size(145, 16);
-            this.lb_namealert3.TabIndex = 9;
-            this.lb_namealert3.Text = "**Duplicate Records found!!";
-            this.lb_namealert3.Visible = false;
-            // 
             // lb_namealert2
             // 
             this.lb_namealert2.AutoSize = true;
@@ -509,6 +497,18 @@
             this.lb_namealert2.TabIndex = 9;
             this.lb_namealert2.Text = "**";
             this.lb_namealert2.Visible = false;
+            // 
+            // lb_namealert3
+            // 
+            this.lb_namealert3.AutoSize = true;
+            this.lb_namealert3.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb_namealert3.ForeColor = System.Drawing.Color.Red;
+            this.lb_namealert3.Location = new System.Drawing.Point(324, 13);
+            this.lb_namealert3.Name = "lb_namealert3";
+            this.lb_namealert3.Size = new System.Drawing.Size(145, 16);
+            this.lb_namealert3.TabIndex = 9;
+            this.lb_namealert3.Text = "**Duplicate Records found!!";
+            this.lb_namealert3.Visible = false;
             // 
             // panel11
             // 

@@ -16,5 +16,10 @@ namespace Work_Log_Project
         {
             InitializeComponent();
         }
+
+        private void bt_submit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

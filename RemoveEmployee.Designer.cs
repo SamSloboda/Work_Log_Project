@@ -92,7 +92,7 @@
             // bt_delete
             // 
             this.bt_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_delete.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete.Font = new System.Drawing.Font("Trebuchet MS", 11F);
             this.bt_delete.ForeColor = System.Drawing.Color.White;
             this.bt_delete.Location = new System.Drawing.Point(3, 3);
             this.bt_delete.Name = "bt_delete";
@@ -105,13 +105,13 @@
             // bt_revive
             // 
             this.bt_revive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_revive.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bt_revive.Font = new System.Drawing.Font("Trebuchet MS", 11F);
             this.bt_revive.ForeColor = System.Drawing.Color.White;
             this.bt_revive.Location = new System.Drawing.Point(3, 3);
             this.bt_revive.Name = "bt_revive";
             this.bt_revive.Size = new System.Drawing.Size(158, 38);
             this.bt_revive.TabIndex = 4;
-            this.bt_revive.Text = "Revive Employee";
+            this.bt_revive.Text = "Reactivate Employee";
             this.bt_revive.UseVisualStyleBackColor = true;
             this.bt_revive.Click += new System.EventHandler(this.bt_revive_Click);
             // 

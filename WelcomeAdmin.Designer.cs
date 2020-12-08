@@ -83,11 +83,11 @@
             // lb_options
             // 
             this.lb_options.AutoSize = true;
-            this.lb_options.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb_options.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lb_options.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lb_options.Location = new System.Drawing.Point(14, 104);
             this.lb_options.Name = "lb_options";
-            this.lb_options.Size = new System.Drawing.Size(308, 20);
+            this.lb_options.Size = new System.Drawing.Size(321, 22);
             this.lb_options.TabIndex = 2;
             this.lb_options.Text = "Please select one of the following options. ";
             // 
@@ -120,7 +120,7 @@
             this.lb_delete.AutoSize = true;
             this.lb_delete.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.lb_delete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_delete.Location = new System.Drawing.Point(3, 261);
+            this.lb_delete.Location = new System.Drawing.Point(-4, 252);
             this.lb_delete.Name = "lb_delete";
             this.lb_delete.Size = new System.Drawing.Size(223, 23);
             this.lb_delete.TabIndex = 5;
@@ -129,7 +129,7 @@
             // bt_delete
             // 
             this.bt_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_delete.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete.Font = new System.Drawing.Font("Trebuchet MS", 9F);
             this.bt_delete.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_delete.Location = new System.Drawing.Point(3, 3);
             this.bt_delete.Name = "bt_delete";
@@ -303,6 +303,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(374, 28);
             this.flowLayoutPanel1.TabIndex = 48;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             this.flowLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
             this.flowLayoutPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseMove);
             this.flowLayoutPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseUp);
