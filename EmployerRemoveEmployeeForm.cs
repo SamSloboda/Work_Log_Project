@@ -45,7 +45,7 @@ namespace Work_Log_Project
 
         private void label9_Click(object sender, EventArgs e)
         {
-            this.close();
+            this.Close();
         }
 
         private void panel16_Paint(object sender, PaintEventArgs e)
