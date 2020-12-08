@@ -107,7 +107,6 @@ namespace Work_Log_Project
             dt_endTime.Value = DateTime.Now;
             ud_lunchBreak.Value = 0;
             ud_otherBreaks.Value = 0;
-
         }
 
         private void flowLayoutPanel1_MouseDown(object sender, MouseEventArgs e)

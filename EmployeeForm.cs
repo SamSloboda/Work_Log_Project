@@ -31,65 +31,69 @@ namespace Work_Log_Project
 
         private void bt_RemoveAttendance_Click(object sender, EventArgs e)
         {
-            string message = "Are you sure you want to delete this time log entry?";
-            string caption = " Delete the Time Log Entry";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            MessageBoxIcon icon = MessageBoxIcon.Question;
-            DialogResult result = MessageBox.Show(this,message,caption, buttons, icon);
-
-            if (result == DialogResult.Yes)
+            try
             {
-                String cs = loginForm.DatabaseConnect.connectionString;
-                SqlConnection con = new SqlConnection(cs);
+                string test = listView1.SelectedItems[0].Text;
 
-                try
+                string message = "Are you sure you want to delete this time log entry?";
+                string caption = " Delete the Time Log Entry";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                MessageBoxIcon icon = MessageBoxIcon.Question;
+                DialogResult result = MessageBox.Show(this, message, caption, buttons, icon);
+
+                if (result == DialogResult.Yes)
                 {
-                    /// taking input which row is selected
-                    int log_id_remove = Int32.Parse(listView1.SelectedItems[0].Text);
+                    String cs = loginForm.DatabaseConnect.connectionString;
+                    SqlConnection con = new SqlConnection(cs);
 
-
-
-                    string query = "update TimeLog set TimeLog.activeLog = @activelog where log_id = @logID ";
-                    SqlCommand myCommand = new SqlCommand(query, con);
-
-                    SqlParameter lActive = new SqlParameter("@activelog", SqlDbType.Bit);
-                    SqlParameter lID = new SqlParameter("@logID", SqlDbType.Int);
-                    lActive.Value = false;
-                    lID.Value = log_id_remove;
-
-                    myCommand.Parameters.Add(lID);
-                    myCommand.Parameters.Add(lActive);
-
-                    myCommand.Connection.Open();
-
-                    Int32 returnFlag = (Int32)myCommand.ExecuteNonQuery();
-                    if (returnFlag > 0)
+                    try
                     {
-                        refreshListView();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Something went wrong");
-                    }
+                        /// taking input which row is selected
+                        int log_id_remove = Int32.Parse(listView1.SelectedItems[0].Text);
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message.ToString());
-                }
-                finally
-                {
-                    con.Close();
+                        string query = "update TimeLog set TimeLog.activeLog = @activelog where log_id = @logID ";
+                        SqlCommand myCommand = new SqlCommand(query, con);
+
+                        SqlParameter lActive = new SqlParameter("@activelog", SqlDbType.Bit);
+                        SqlParameter lID = new SqlParameter("@logID", SqlDbType.Int);
+                        lActive.Value = false;
+                        lID.Value = log_id_remove;
+
+                        myCommand.Parameters.Add(lID);
+                        myCommand.Parameters.Add(lActive);
+
+                        myCommand.Connection.Open();
+
+                        Int32 returnFlag = (Int32)myCommand.ExecuteNonQuery();
+                        if (returnFlag > 0)
+                        {
+                            refreshListView();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Something went wrong");
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
                 }
             }
-            else 
+            catch(Exception ex) 
             {
+                string mess = "Please select the log entry you wish to be removed.";
+                string cap = "No Log Entry Selected";
+                MessageBox.Show(this,mess,cap, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            
                 
-            }
-
-
-
-
         }
         /**
          * Loads the remaining data specific for the employee such as name, employee_id and creationtime to userClass class.
