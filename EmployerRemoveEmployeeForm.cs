@@ -43,6 +43,16 @@ namespace Work_Log_Project
 
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
+            this.close
+        }
+
+        private void panel16_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void flowLayoutPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;

@@ -106,7 +106,7 @@
             this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_password.Font = new System.Drawing.Font("Trebuchet MS", 20.25F);
             this.tb_password.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tb_password.Location = new System.Drawing.Point(35, 12);
+            this.tb_password.Location = new System.Drawing.Point(35, 3);
             this.tb_password.MaxLength = 10;
             this.tb_password.Name = "tb_password";
             this.tb_password.PasswordChar = '*';
