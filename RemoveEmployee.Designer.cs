@@ -64,9 +64,9 @@
             this.listView1.Font = new System.Drawing.Font("Trebuchet MS", 8F);
             this.listView1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(38, 120);
+            this.listView1.Location = new System.Drawing.Point(30, 127);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(376, 415);
+            this.listView1.Size = new System.Drawing.Size(404, 415);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -75,7 +75,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(35, 86);
+            this.label1.Location = new System.Drawing.Point(25, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 27);
             this.label1.TabIndex = 1;
