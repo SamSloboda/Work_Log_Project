@@ -126,8 +126,10 @@ namespace Work_Log_Project
                     //If the test passes, we will proceed to add our new record to the database
                     //Insertion Process'
                     //string connectionstring = loginForm.DatabaseConnect.connectionString;
+                    lb_namealert.Visible = false;
+                    lb_namealert2.Visible = false;
+                    lb_namealert3.Visible = false;
 
-                    
                     SqlConnection connection1 = new SqlConnection(connectionstring);
                     SqlCommand command1 = connection1.CreateCommand();
                     try
@@ -191,11 +193,14 @@ namespace Work_Log_Project
                         
                 }
 
-
+                   
                 }
 
                 else
                 {
+                    lb_namealert.Visible = true;
+                    lb_namealert2.Visible = true;
+                    lb_namealert3.Visible = true;
                     MessageBox.Show("Duplicate records found. Please check the records!", "Fatal Error!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 }
 
