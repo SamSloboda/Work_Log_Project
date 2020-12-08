@@ -61,6 +61,8 @@
             // 
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView1.Font = new System.Drawing.Font("Trebuchet MS", 8F);
+            this.listView1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(38, 120);
             this.listView1.Name = "listView1";
