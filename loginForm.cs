@@ -79,11 +79,13 @@ namespace Work_Log_Project
                     {
                         MessageBox.Show("You have logged in successfully as: Admin " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tb_password.Text = "";
+                        this.Hide();
                         ///showing employerForm
-                       // AdminPage employerForm = new AdminPage();
-                       // employerForm.ShowDialog();
+                        // AdminPage employerForm = new AdminPage();
+                        // employerForm.ShowDialog();
                         WelcomeAdmin form = new WelcomeAdmin();
                         form.ShowDialog();
+
                     }
                     ///if normal employee account
                     if (myReader.GetBoolean(3) == false)

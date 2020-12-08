@@ -105,6 +105,7 @@
             this.bt_submit.TabIndex = 0;
             this.bt_submit.Text = "Submit";
             this.bt_submit.UseVisualStyleBackColor = true;
+            this.bt_submit.Click += new System.EventHandler(this.bt_submit_Click_1);
             // 
             // bt_clear
             // 
@@ -118,6 +119,7 @@
             this.bt_clear.TabIndex = 1;
             this.bt_clear.Text = "Clear";
             this.bt_clear.UseVisualStyleBackColor = true;
+            this.bt_clear.Click += new System.EventHandler(this.bt_clear_Click_1);
             // 
             // bt_exit
             // 
