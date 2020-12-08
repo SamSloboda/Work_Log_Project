@@ -101,6 +101,15 @@ namespace Work_Log_Project
 
         }
 
+        private void bt_clear_Click(object sender, EventArgs e)
+        {
+            dt_startTime.Value = DateTime.Now;
+            dt_endTime.Value = DateTime.Now;
+            ud_lunchBreak.Value = 0;
+            ud_otherBreaks.Value = 0;
+
+        }
+
         private void flowLayoutPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;

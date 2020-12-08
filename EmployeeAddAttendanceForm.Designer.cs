@@ -80,10 +80,9 @@
             this.lb_startWork.AutoSize = true;
             this.lb_startWork.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.lb_startWork.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_startWork.Location = new System.Drawing.Point(11, 13);
-            this.lb_startWork.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_startWork.Location = new System.Drawing.Point(15, 16);
             this.lb_startWork.Name = "lb_startWork";
-            this.lb_startWork.Size = new System.Drawing.Size(184, 27);
+            this.lb_startWork.Size = new System.Drawing.Size(237, 35);
             this.lb_startWork.TabIndex = 2;
             this.lb_startWork.Text = "~Started working~";
             // 
@@ -92,10 +91,9 @@
             this.lb_otherBreakLength.AutoSize = true;
             this.lb_otherBreakLength.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.lb_otherBreakLength.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_otherBreakLength.Location = new System.Drawing.Point(19, 11);
-            this.lb_otherBreakLength.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_otherBreakLength.Location = new System.Drawing.Point(25, 14);
             this.lb_otherBreakLength.Name = "lb_otherBreakLength";
-            this.lb_otherBreakLength.Size = new System.Drawing.Size(250, 27);
+            this.lb_otherBreakLength.Size = new System.Drawing.Size(325, 35);
             this.lb_otherBreakLength.TabIndex = 4;
             this.lb_otherBreakLength.Text = "~Length of Other Breaks~";
             // 
@@ -104,10 +102,9 @@
             this.lb_endWork.AutoSize = true;
             this.lb_endWork.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.lb_endWork.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_endWork.Location = new System.Drawing.Point(22, 9);
-            this.lb_endWork.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_endWork.Location = new System.Drawing.Point(29, 11);
             this.lb_endWork.Name = "lb_endWork";
-            this.lb_endWork.Size = new System.Drawing.Size(172, 27);
+            this.lb_endWork.Size = new System.Drawing.Size(221, 35);
             this.lb_endWork.TabIndex = 5;
             this.lb_endWork.Text = "~Ended working~";
             // 
@@ -116,10 +113,10 @@
             this.bt_submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_submit.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.bt_submit.ForeColor = System.Drawing.Color.White;
-            this.bt_submit.Location = new System.Drawing.Point(2, 2);
-            this.bt_submit.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_submit.Location = new System.Drawing.Point(3, 2);
+            this.bt_submit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_submit.Name = "bt_submit";
-            this.bt_submit.Size = new System.Drawing.Size(160, 40);
+            this.bt_submit.Size = new System.Drawing.Size(213, 49);
             this.bt_submit.TabIndex = 10;
             this.bt_submit.Text = "Submit";
             this.bt_submit.UseVisualStyleBackColor = true;
@@ -130,23 +127,24 @@
             this.bt_clear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_clear.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.bt_clear.ForeColor = System.Drawing.Color.White;
-            this.bt_clear.Location = new System.Drawing.Point(2, 2);
-            this.bt_clear.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_clear.Location = new System.Drawing.Point(3, 2);
+            this.bt_clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_clear.Name = "bt_clear";
-            this.bt_clear.Size = new System.Drawing.Size(160, 40);
+            this.bt_clear.Size = new System.Drawing.Size(213, 49);
             this.bt_clear.TabIndex = 11;
             this.bt_clear.Text = "Clear";
             this.bt_clear.UseVisualStyleBackColor = true;
+            this.bt_clear.Click += new System.EventHandler(this.bt_clear_Click);
             // 
             // bt_exit
             // 
             this.bt_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_exit.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.bt_exit.ForeColor = System.Drawing.Color.White;
-            this.bt_exit.Location = new System.Drawing.Point(2, 2);
-            this.bt_exit.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_exit.Location = new System.Drawing.Point(3, 2);
+            this.bt_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(160, 40);
+            this.bt_exit.Size = new System.Drawing.Size(213, 49);
             this.bt_exit.TabIndex = 12;
             this.bt_exit.Text = "Exit";
             this.bt_exit.UseVisualStyleBackColor = true;
@@ -158,10 +156,10 @@
             this.dt_startTime.CalendarTitleForeColor = System.Drawing.Color.Crimson;
             this.dt_startTime.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.dt_startTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dt_startTime.Location = new System.Drawing.Point(389, 8);
-            this.dt_startTime.Margin = new System.Windows.Forms.Padding(2);
+            this.dt_startTime.Location = new System.Drawing.Point(519, 10);
+            this.dt_startTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dt_startTime.Name = "dt_startTime";
-            this.dt_startTime.Size = new System.Drawing.Size(154, 32);
+            this.dt_startTime.Size = new System.Drawing.Size(204, 38);
             this.dt_startTime.TabIndex = 13;
             // 
             // dt_endTime
@@ -170,24 +168,24 @@
             this.dt_endTime.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.dt_endTime.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.dt_endTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dt_endTime.Location = new System.Drawing.Point(385, 9);
-            this.dt_endTime.Margin = new System.Windows.Forms.Padding(2);
+            this.dt_endTime.Location = new System.Drawing.Point(513, 11);
+            this.dt_endTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dt_endTime.Name = "dt_endTime";
-            this.dt_endTime.Size = new System.Drawing.Size(154, 32);
+            this.dt_endTime.Size = new System.Drawing.Size(204, 38);
             this.dt_endTime.TabIndex = 14;
             // 
             // ud_otherBreaks
             // 
             this.ud_otherBreaks.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
-            this.ud_otherBreaks.Location = new System.Drawing.Point(385, 9);
-            this.ud_otherBreaks.Margin = new System.Windows.Forms.Padding(2);
+            this.ud_otherBreaks.Location = new System.Drawing.Point(513, 11);
+            this.ud_otherBreaks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ud_otherBreaks.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
             this.ud_otherBreaks.Name = "ud_otherBreaks";
-            this.ud_otherBreaks.Size = new System.Drawing.Size(154, 32);
+            this.ud_otherBreaks.Size = new System.Drawing.Size(205, 38);
             this.ud_otherBreaks.TabIndex = 18;
             // 
             // panel3
@@ -195,9 +193,10 @@
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel3.Location = new System.Drawing.Point(12, 415);
+            this.panel3.Location = new System.Drawing.Point(16, 511);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(170, 50);
+            this.panel3.Size = new System.Drawing.Size(227, 62);
             this.panel3.TabIndex = 19;
             // 
             // panel4
@@ -205,9 +204,10 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
             this.panel4.Controls.Add(this.bt_submit);
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Location = new System.Drawing.Point(4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(164, 44);
+            this.panel4.Size = new System.Drawing.Size(219, 54);
             this.panel4.TabIndex = 14;
             // 
             // panel1
@@ -215,9 +215,10 @@
             this.panel1.BackColor = System.Drawing.Color.Crimson;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel1.Location = new System.Drawing.Point(199, 415);
+            this.panel1.Location = new System.Drawing.Point(265, 511);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(170, 50);
+            this.panel1.Size = new System.Drawing.Size(227, 62);
             this.panel1.TabIndex = 20;
             // 
             // panel2
@@ -225,9 +226,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
             this.panel2.Controls.Add(this.bt_clear);
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(164, 44);
+            this.panel2.Size = new System.Drawing.Size(219, 54);
             this.panel2.TabIndex = 14;
             // 
             // panel5
@@ -235,9 +237,10 @@
             this.panel5.BackColor = System.Drawing.Color.Crimson;
             this.panel5.Controls.Add(this.panel6);
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel5.Location = new System.Drawing.Point(386, 415);
+            this.panel5.Location = new System.Drawing.Point(515, 511);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(170, 50);
+            this.panel5.Size = new System.Drawing.Size(227, 62);
             this.panel5.TabIndex = 21;
             // 
             // panel6
@@ -245,9 +248,10 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
             this.panel6.Controls.Add(this.bt_exit);
             this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Location = new System.Drawing.Point(4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(164, 44);
+            this.panel6.Size = new System.Drawing.Size(219, 54);
             this.panel6.TabIndex = 14;
             // 
             // panel7
@@ -256,9 +260,10 @@
             this.panel7.Controls.Add(this.lb_startWork);
             this.panel7.Controls.Add(this.dt_startTime);
             this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
-            this.panel7.Location = new System.Drawing.Point(-4, 3);
+            this.panel7.Location = new System.Drawing.Point(-5, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(579, 47);
+            this.panel7.Size = new System.Drawing.Size(772, 58);
             this.panel7.TabIndex = 22;
             // 
             // panel9
@@ -267,9 +272,10 @@
             this.panel9.Controls.Add(this.lb_otherBreakLength);
             this.panel9.Controls.Add(this.ud_otherBreaks);
             this.panel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
-            this.panel9.Location = new System.Drawing.Point(0, 3);
+            this.panel9.Location = new System.Drawing.Point(0, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(575, 47);
+            this.panel9.Size = new System.Drawing.Size(767, 58);
             this.panel9.TabIndex = 24;
             // 
             // panel11
@@ -277,9 +283,10 @@
             this.panel11.BackColor = System.Drawing.Color.Crimson;
             this.panel11.Controls.Add(this.panel7);
             this.panel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel11.Location = new System.Drawing.Point(1, 69);
+            this.panel11.Location = new System.Drawing.Point(1, 85);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(575, 54);
+            this.panel11.Size = new System.Drawing.Size(767, 66);
             this.panel11.TabIndex = 26;
             // 
             // panel10
@@ -288,16 +295,18 @@
             this.panel10.Controls.Add(this.dt_endTime);
             this.panel10.Controls.Add(this.lb_endWork);
             this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
-            this.panel10.Location = new System.Drawing.Point(0, 3);
+            this.panel10.Location = new System.Drawing.Point(0, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(575, 47);
+            this.panel10.Size = new System.Drawing.Size(767, 58);
             this.panel10.TabIndex = 29;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, -2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(572, 31);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(763, 38);
             this.flowLayoutPanel1.TabIndex = 31;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             this.flowLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
@@ -310,9 +319,10 @@
             this.lb_close.BackColor = System.Drawing.Color.Transparent;
             this.lb_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.lb_close.ForeColor = System.Drawing.Color.Crimson;
-            this.lb_close.Location = new System.Drawing.Point(526, 9);
+            this.lb_close.Location = new System.Drawing.Point(701, 11);
+            this.lb_close.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_close.Name = "lb_close";
-            this.lb_close.Size = new System.Drawing.Size(30, 29);
+            this.lb_close.Size = new System.Drawing.Size(34, 33);
             this.lb_close.TabIndex = 32;
             this.lb_close.Text = "X";
             this.lb_close.Click += new System.EventHandler(this.lb_close_Click);
@@ -323,9 +333,10 @@
             this.panel8.Controls.Add(this.lb_lenghtOfLunchBreak);
             this.panel8.Controls.Add(this.ud_lunchBreak);
             this.panel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
-            this.panel8.Location = new System.Drawing.Point(0, 4);
+            this.panel8.Location = new System.Drawing.Point(0, 5);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(575, 47);
+            this.panel8.Size = new System.Drawing.Size(767, 58);
             this.panel8.TabIndex = 23;
             // 
             // lb_lenghtOfLunchBreak
@@ -333,10 +344,9 @@
             this.lb_lenghtOfLunchBreak.AutoSize = true;
             this.lb_lenghtOfLunchBreak.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.lb_lenghtOfLunchBreak.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_lenghtOfLunchBreak.Location = new System.Drawing.Point(19, 9);
-            this.lb_lenghtOfLunchBreak.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_lenghtOfLunchBreak.Location = new System.Drawing.Point(25, 11);
             this.lb_lenghtOfLunchBreak.Name = "lb_lenghtOfLunchBreak";
-            this.lb_lenghtOfLunchBreak.Size = new System.Drawing.Size(236, 27);
+            this.lb_lenghtOfLunchBreak.Size = new System.Drawing.Size(308, 35);
             this.lb_lenghtOfLunchBreak.TabIndex = 3;
             this.lb_lenghtOfLunchBreak.Text = "~Length of Lunchbreak~";
             // 
@@ -345,15 +355,15 @@
             this.ud_lunchBreak.BackColor = System.Drawing.SystemColors.Window;
             this.ud_lunchBreak.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
             this.ud_lunchBreak.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ud_lunchBreak.Location = new System.Drawing.Point(385, 7);
-            this.ud_lunchBreak.Margin = new System.Windows.Forms.Padding(2);
+            this.ud_lunchBreak.Location = new System.Drawing.Point(513, 9);
+            this.ud_lunchBreak.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ud_lunchBreak.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
             this.ud_lunchBreak.Name = "ud_lunchBreak";
-            this.ud_lunchBreak.Size = new System.Drawing.Size(154, 32);
+            this.ud_lunchBreak.Size = new System.Drawing.Size(205, 38);
             this.ud_lunchBreak.TabIndex = 17;
             // 
             // panel12
@@ -361,9 +371,10 @@
             this.panel12.BackColor = System.Drawing.Color.Crimson;
             this.panel12.Controls.Add(this.panel8);
             this.panel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel12.Location = new System.Drawing.Point(1, 152);
+            this.panel12.Location = new System.Drawing.Point(1, 187);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(575, 54);
+            this.panel12.Size = new System.Drawing.Size(767, 66);
             this.panel12.TabIndex = 33;
             // 
             // panel13
@@ -371,9 +382,10 @@
             this.panel13.BackColor = System.Drawing.Color.Crimson;
             this.panel13.Controls.Add(this.panel9);
             this.panel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel13.Location = new System.Drawing.Point(1, 234);
+            this.panel13.Location = new System.Drawing.Point(1, 288);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(575, 54);
+            this.panel13.Size = new System.Drawing.Size(767, 66);
             this.panel13.TabIndex = 34;
             // 
             // panel14
@@ -381,33 +393,36 @@
             this.panel14.BackColor = System.Drawing.Color.Crimson;
             this.panel14.Controls.Add(this.panel10);
             this.panel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel14.Location = new System.Drawing.Point(1, 317);
+            this.panel14.Location = new System.Drawing.Point(1, 390);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(575, 54);
+            this.panel14.Size = new System.Drawing.Size(767, 66);
             this.panel14.TabIndex = 35;
             // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Crimson;
-            this.panel15.Location = new System.Drawing.Point(-3, 495);
+            this.panel15.Location = new System.Drawing.Point(-4, 609);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(576, 10);
+            this.panel15.Size = new System.Drawing.Size(768, 12);
             this.panel15.TabIndex = 36;
             // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
-            this.panel16.Location = new System.Drawing.Point(-3, 485);
+            this.panel16.Location = new System.Drawing.Point(-4, 597);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(576, 17);
+            this.panel16.Size = new System.Drawing.Size(768, 21);
             this.panel16.TabIndex = 37;
             // 
             // EmployeeAddAttendanceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(568, 507);
+            this.ClientSize = new System.Drawing.Size(757, 624);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel12);
@@ -420,7 +435,7 @@
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel15);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EmployeeAddAttendanceForm";
             this.Text = "Add Attendance";
             this.Load += new System.EventHandler(this.EmployeeAddAttendanceForm_Load);
