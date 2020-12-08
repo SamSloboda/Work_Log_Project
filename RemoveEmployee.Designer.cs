@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lb_user = new System.Windows.Forms.Label();
             this.bt_delete = new System.Windows.Forms.Button();
-            this.bt_refresh = new System.Windows.Forms.Button();
+            this.bt_revive = new System.Windows.Forms.Button();
             this.bt_goback = new System.Windows.Forms.Button();
             this.bt_signout = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -92,28 +92,28 @@
             // bt_delete
             // 
             this.bt_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_delete.Font = new System.Drawing.Font("Trebuchet MS", 13F);
+            this.bt_delete.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delete.ForeColor = System.Drawing.Color.White;
             this.bt_delete.Location = new System.Drawing.Point(3, 3);
             this.bt_delete.Name = "bt_delete";
             this.bt_delete.Size = new System.Drawing.Size(158, 38);
             this.bt_delete.TabIndex = 3;
-            this.bt_delete.Text = "Delete Employee";
+            this.bt_delete.Text = "Deactivate Employee";
             this.bt_delete.UseVisualStyleBackColor = true;
             this.bt_delete.Click += new System.EventHandler(this.bt_delete_Click);
             // 
-            // bt_refresh
+            // bt_revive
             // 
-            this.bt_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_refresh.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bt_refresh.ForeColor = System.Drawing.Color.White;
-            this.bt_refresh.Location = new System.Drawing.Point(3, 3);
-            this.bt_refresh.Name = "bt_refresh";
-            this.bt_refresh.Size = new System.Drawing.Size(158, 38);
-            this.bt_refresh.TabIndex = 4;
-            this.bt_refresh.Text = "Refresh";
-            this.bt_refresh.UseVisualStyleBackColor = true;
-            this.bt_refresh.Click += new System.EventHandler(this.bt_refresh_Click);
+            this.bt_revive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bt_revive.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bt_revive.ForeColor = System.Drawing.Color.White;
+            this.bt_revive.Location = new System.Drawing.Point(3, 3);
+            this.bt_revive.Name = "bt_revive";
+            this.bt_revive.Size = new System.Drawing.Size(158, 38);
+            this.bt_revive.TabIndex = 4;
+            this.bt_revive.Text = "Revive Employee";
+            this.bt_revive.UseVisualStyleBackColor = true;
+            this.bt_revive.Click += new System.EventHandler(this.bt_revive_Click);
             // 
             // bt_goback
             // 
@@ -174,7 +174,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
-            this.panel2.Controls.Add(this.bt_refresh);
+            this.panel2.Controls.Add(this.bt_revive);
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
@@ -301,7 +301,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_user;
         private System.Windows.Forms.Button bt_delete;
-        private System.Windows.Forms.Button bt_refresh;
+        private System.Windows.Forms.Button bt_revive;
         private System.Windows.Forms.Button bt_goback;
         private System.Windows.Forms.Button bt_signout;
         private System.Windows.Forms.Panel panel3;

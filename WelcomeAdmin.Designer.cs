@@ -120,22 +120,22 @@
             this.lb_delete.AutoSize = true;
             this.lb_delete.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.lb_delete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_delete.Location = new System.Drawing.Point(56, 254);
+            this.lb_delete.Location = new System.Drawing.Point(3, 261);
             this.lb_delete.Name = "lb_delete";
-            this.lb_delete.Size = new System.Drawing.Size(160, 23);
+            this.lb_delete.Size = new System.Drawing.Size(223, 23);
             this.lb_delete.TabIndex = 5;
-            this.lb_delete.Text = "Delete a Employee";
+            this.lb_delete.Text = "Change User\'s Accessibility";
             // 
             // bt_delete
             // 
             this.bt_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_delete.Font = new System.Drawing.Font("Trebuchet MS", 13F);
+            this.bt_delete.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delete.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_delete.Location = new System.Drawing.Point(3, 3);
             this.bt_delete.Name = "bt_delete";
             this.bt_delete.Size = new System.Drawing.Size(90, 38);
             this.bt_delete.TabIndex = 6;
-            this.bt_delete.Text = "Delete";
+            this.bt_delete.Text = "Accessibility";
             this.bt_delete.UseVisualStyleBackColor = true;
             this.bt_delete.Click += new System.EventHandler(this.bt_delete_Click_1);
             // 

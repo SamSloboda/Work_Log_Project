@@ -43,6 +43,7 @@ namespace Work_Log_Project
 
         private void bt_Signout_Click(object sender, EventArgs e)
         {
+            this.Hide();
             loginForm form = new loginForm();
             form.ShowDialog();
         }

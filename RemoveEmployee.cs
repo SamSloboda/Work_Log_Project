@@ -23,7 +23,68 @@ namespace Work_Log_Project
         private void bt_delete_Click(object sender, EventArgs e)
         {
            
-            
+
+            //string connectionstring = loginForm.DatabaseConnect.connectionString;
+            //SqlConnection connection = new SqlConnection(connectionstring);
+            string message = "Are you sure you want to delete the selected Employee?";
+            string caption = " Deactivate the User Confirmation";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            MessageBoxIcon icon = MessageBoxIcon.Question;
+            DialogResult result = MessageBox.Show(this, message, caption, buttons, icon);
+
+            if (result == DialogResult.Yes)
+            {
+                String cs = loginForm.DatabaseConnect.connectionString;
+                SqlConnection con = new SqlConnection(cs);
+
+                try
+                {
+                    /// taking input which row is selected
+                    int idToRemove = Int32.Parse(listView1.SelectedItems[0].SubItems[0].Text);
+
+
+
+                    string query = "UPDATE db_User SET db_User.activeUser = @activelog where user_id = @logID ";
+                    SqlCommand myCommand = new SqlCommand(query, con);
+
+                    SqlParameter lActive = new SqlParameter("@activelog", SqlDbType.Bit);
+                    SqlParameter lID = new SqlParameter("@logID", SqlDbType.Int);
+                    lActive.Value = false;
+                    lID.Value = idToRemove;
+
+                    myCommand.Parameters.Add(lID);
+                    myCommand.Parameters.Add(lActive);
+
+                    myCommand.Connection.Open();
+
+                    Int32 returnFlag = (Int32)myCommand.ExecuteNonQuery();
+                    if (returnFlag > 0)
+                    {
+                        MessageBox.Show("The stated user is deactivated.", "Operation successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        refreshListView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something went wrong");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            else
+            {
+
+            }
+
+
+
 
 
 
@@ -35,52 +96,88 @@ namespace Work_Log_Project
          */
 
 
-        private void bt_refresh_Click(object sender, EventArgs e)
+        private void bt_revive_Click(object sender, EventArgs e)
         {
-            refreshListView();
+            string message = "Are you sure you want to revive the selected Employee?";
+            string caption = " Reviving the User Confirmation";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            MessageBoxIcon icon = MessageBoxIcon.Question;
+            DialogResult result = MessageBox.Show(this, message, caption, buttons, icon);
+
+            if (result == DialogResult.Yes)
+            {
+                String cs = loginForm.DatabaseConnect.connectionString;
+                SqlConnection con = new SqlConnection(cs);
+
+                try
+                {
+                    /// taking input which row is selected
+                    int idToRevive = Int32.Parse(listView1.SelectedItems[0].SubItems[0].Text);
 
 
-            
+
+                    string query = "UPDATE db_User SET db_User.activeUser = @activelog where user_id = @logID ";
+                    SqlCommand myCommand = new SqlCommand(query, con);
+
+                    SqlParameter lActive = new SqlParameter("@activelog", SqlDbType.Bit);
+                    SqlParameter lID = new SqlParameter("@logID", SqlDbType.Int);
+                    lActive.Value = true;
+                    lID.Value = idToRevive;
+
+                    myCommand.Parameters.Add(lID);
+                    myCommand.Parameters.Add(lActive);
+
+                    myCommand.Connection.Open();
+
+                    Int32 returnFlag = (Int32)myCommand.ExecuteNonQuery();
+                    if (returnFlag > 0)
+                    {
+                        MessageBox.Show("The stated user is activated. Employee can now access his/her account!", "Operation successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        refreshListView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something went wrong");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            else
+            {
+
+            }
+
+
+
         }
 
         private void bt_goback_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            WelcomeAdmin page = new WelcomeAdmin();
+            page.ShowDialog();
         }
 
         private void bt_signout_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            foreach(Form openedform in Application.OpenForms)
+            {
+                
+                openedform.Hide();
+            }
             loginForm form = new loginForm();
             form.ShowDialog();
         }
 
-        public void loadDataToClass(SqlConnection con)
-        {
-            string sel = "SELECT * FROM Employee right join db_User on db_User.user_id = Employee.user_id where db_User.user_id = @user_id ";
-            SqlCommand myCommand = new SqlCommand(sel, con);
-            SqlParameter uID = new SqlParameter("@user_id", SqlDbType.Int);
-            uID.Value = userClass.user_id;
-            myCommand.Parameters.Add(uID);
-            myCommand.Connection.Open();
-
-
-            SqlDataReader myReader1 = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
-
-            if (myReader1.Read() == true)
-            {
-                userClass.employee_id = myReader1.GetInt32(6);
-                userClass.firstName = myReader1.GetString(7);
-                if (myReader1.IsDBNull(8) == false)
-                {
-                    userClass.middleName = myReader1.GetString(8);
-                }
-                userClass.lastName = myReader1.GetString(9);
-                userClass.creationTime = myReader1.GetDateTime(10);
-            }
-
-            con.Close();
-        }
+        
 
         private void RemoveEmployee_Load(object sender, EventArgs e)
         {
@@ -91,17 +188,19 @@ namespace Work_Log_Project
             SqlCommand myCommand = new SqlCommand(query, con);
             myCommand.Connection.Open();
             SqlDataReader myreader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
-            listView1.Columns.Add("User ID",50);
-            // listView1.Columns.Add("Employee ID");
-            listView1.Columns.Add("First Name",100);
+            listView1.FullRowSelect=true;
+            listView1.Columns.Add("UserID",40);
+            listView1.Columns.Add("Emp.ID",40);
+            listView1.Columns.Add("First Name",80);
             // listView1.Columns.Add("Middle Name");
-            listView1.Columns.Add("Last Name",130);
-            listView1.Columns.Add("Date of Creation", 180);
-
+            listView1.Columns.Add("Last Name",100);
+            listView1.Columns.Add("Active User", 160);
+           
             if (myreader.Read())
             {
                
                 listView1.View = View.Details;
+
                 refreshListView();
                 //  listView1.Items.Add("Employee ID", "First Name", "Middle Name", "Last Name");
             }
@@ -112,23 +211,24 @@ namespace Work_Log_Project
             String cs = loginForm.DatabaseConnect.connectionString;
             SqlConnection con1 = new SqlConnection(cs);
             ///show all the ACTIVE timeLogs for the current user
-            String sel1 = "SELECT user_id, firstName, lastName, creationTime FROM Employee";
+            String sel1 = "SELECT Employee.user_id,employee_id, firstName, lastName, activeUser FROM Employee JOIN db_User ON db_User.user_id=Employee.user_id";
             SqlDataAdapter Da = new SqlDataAdapter(sel1, con1);
             DataSet ds = new DataSet();
             DataTable dt;
-
+       
             Da.Fill(ds, "QueryResult");
 
             dt = ds.Tables["QueryResult"];
             con1.Close();
-
+            listView1.Items.Clear();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 DataRow dr = dt.Rows[i];
                 ListViewItem listitem = new ListViewItem(dr["user_id"].ToString());
+                listitem.SubItems.Add(dr["employee_id"].ToString());
                 listitem.SubItems.Add(dr["firstName"].ToString());
                 listitem.SubItems.Add(dr["lastName"].ToString());
-                listitem.SubItems.Add(dr["creationTime"].ToString());
+                listitem.SubItems.Add(dr["activeUser"].ToString());
                 listView1.Items.Add(listitem);
             }
 
