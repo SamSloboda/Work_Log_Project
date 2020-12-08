@@ -50,8 +50,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lb_close = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.ud_lunchBreak = new System.Windows.Forms.NumericUpDown();
             this.lb_lenghtOfLunchBreak = new System.Windows.Forms.Label();
+            this.ud_lunchBreak = new System.Windows.Forms.NumericUpDown();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -328,6 +328,18 @@
             this.panel8.Size = new System.Drawing.Size(575, 47);
             this.panel8.TabIndex = 23;
             // 
+            // lb_lenghtOfLunchBreak
+            // 
+            this.lb_lenghtOfLunchBreak.AutoSize = true;
+            this.lb_lenghtOfLunchBreak.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
+            this.lb_lenghtOfLunchBreak.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lb_lenghtOfLunchBreak.Location = new System.Drawing.Point(19, 9);
+            this.lb_lenghtOfLunchBreak.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_lenghtOfLunchBreak.Name = "lb_lenghtOfLunchBreak";
+            this.lb_lenghtOfLunchBreak.Size = new System.Drawing.Size(236, 27);
+            this.lb_lenghtOfLunchBreak.TabIndex = 3;
+            this.lb_lenghtOfLunchBreak.Text = "~Length of Lunchbreak~";
+            // 
             // ud_lunchBreak
             // 
             this.ud_lunchBreak.BackColor = System.Drawing.SystemColors.Window;
@@ -343,18 +355,6 @@
             this.ud_lunchBreak.Name = "ud_lunchBreak";
             this.ud_lunchBreak.Size = new System.Drawing.Size(154, 32);
             this.ud_lunchBreak.TabIndex = 17;
-            // 
-            // lb_lenghtOfLunchBreak
-            // 
-            this.lb_lenghtOfLunchBreak.AutoSize = true;
-            this.lb_lenghtOfLunchBreak.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
-            this.lb_lenghtOfLunchBreak.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_lenghtOfLunchBreak.Location = new System.Drawing.Point(19, 9);
-            this.lb_lenghtOfLunchBreak.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_lenghtOfLunchBreak.Name = "lb_lenghtOfLunchBreak";
-            this.lb_lenghtOfLunchBreak.Size = new System.Drawing.Size(236, 27);
-            this.lb_lenghtOfLunchBreak.TabIndex = 3;
-            this.lb_lenghtOfLunchBreak.Text = "~Length of Lunchbreak~";
             // 
             // panel12
             // 
