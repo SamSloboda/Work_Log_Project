@@ -65,7 +65,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(49, 14);
+            this.label1.Location = new System.Drawing.Point(64, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(236, 61);
             this.label1.TabIndex = 0;
@@ -85,7 +85,7 @@
             this.lb_options.AutoSize = true;
             this.lb_options.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lb_options.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_options.Location = new System.Drawing.Point(16, 125);
+            this.lb_options.Location = new System.Drawing.Point(19, 127);
             this.lb_options.Name = "lb_options";
             this.lb_options.Size = new System.Drawing.Size(321, 22);
             this.lb_options.TabIndex = 2;
@@ -96,7 +96,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(11, 193);
+            this.label2.Location = new System.Drawing.Point(29, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(205, 23);
             this.label2.TabIndex = 3;
@@ -120,7 +120,7 @@
             this.lb_delete.AutoSize = true;
             this.lb_delete.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.lb_delete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_delete.Location = new System.Drawing.Point(-4, 252);
+            this.lb_delete.Location = new System.Drawing.Point(11, 252);
             this.lb_delete.Name = "lb_delete";
             this.lb_delete.Size = new System.Drawing.Size(223, 23);
             this.lb_delete.TabIndex = 5;
@@ -144,7 +144,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(23, 376);
+            this.label3.Location = new System.Drawing.Point(41, 376);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(193, 23);
             this.label3.TabIndex = 7;
@@ -168,7 +168,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(126, 315);
+            this.label4.Location = new System.Drawing.Point(144, 315);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 23);
             this.label4.TabIndex = 9;
@@ -217,7 +217,7 @@
             this.panel5.BackColor = System.Drawing.Color.Crimson;
             this.panel5.Controls.Add(this.bt_add);
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel5.Location = new System.Drawing.Point(226, 182);
+            this.panel5.Location = new System.Drawing.Point(241, 182);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(96, 44);
             this.panel5.TabIndex = 14;
@@ -227,7 +227,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
             this.panel6.Controls.Add(this.panel7);
             this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel6.Location = new System.Drawing.Point(120, 462);
+            this.panel6.Location = new System.Drawing.Point(132, 462);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(102, 50);
             this.panel6.TabIndex = 44;
@@ -247,7 +247,7 @@
             this.panel8.BackColor = System.Drawing.Color.Crimson;
             this.panel8.Controls.Add(this.bt_review);
             this.panel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel8.Location = new System.Drawing.Point(226, 365);
+            this.panel8.Location = new System.Drawing.Point(241, 365);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(96, 44);
             this.panel8.TabIndex = 45;
@@ -257,7 +257,7 @@
             this.panel9.BackColor = System.Drawing.Color.Crimson;
             this.panel9.Controls.Add(this.bt_edit);
             this.panel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel9.Location = new System.Drawing.Point(226, 304);
+            this.panel9.Location = new System.Drawing.Point(241, 304);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(96, 44);
             this.panel9.TabIndex = 15;
@@ -267,7 +267,7 @@
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Controls.Add(this.bt_delete);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
-            this.panel3.Location = new System.Drawing.Point(226, 243);
+            this.panel3.Location = new System.Drawing.Point(241, 243);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(96, 44);
             this.panel3.TabIndex = 46;
@@ -278,7 +278,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 534);
+            this.panel1.Size = new System.Drawing.Size(362, 534);
             this.panel1.TabIndex = 47;
             // 
             // panel2
@@ -298,14 +298,14 @@
             this.panel2.Controls.Add(this.lb_options);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 528);
+            this.panel2.Size = new System.Drawing.Size(356, 528);
             this.panel2.TabIndex = 48;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, -2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(374, 28);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(386, 28);
             this.flowLayoutPanel1.TabIndex = 48;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             this.flowLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
@@ -317,7 +317,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(374, 558);
+            this.ClientSize = new System.Drawing.Size(383, 558);
             this.Controls.Add(this.lb_user);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
