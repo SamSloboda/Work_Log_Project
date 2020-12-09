@@ -63,6 +63,12 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -72,6 +78,12 @@
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -81,7 +93,7 @@
             this.groupBox1.Controls.Add(this.panel9);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 15.75F);
+            this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox1.Location = new System.Drawing.Point(24, 131);
             this.groupBox1.Name = "groupBox1";
@@ -174,20 +186,22 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
             this.groupBox2.Controls.Add(this.bt_revert);
             this.groupBox2.Controls.Add(this.bt_submitchange);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Location = new System.Drawing.Point(24, 326);
+            this.groupBox2.ForeColor = System.Drawing.Color.Crimson;
+            this.groupBox2.Location = new System.Drawing.Point(467, 105);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(538, 274);
+            this.groupBox2.Size = new System.Drawing.Size(284, 524);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Please edit the data below!";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // bt_revert
             // 
-            this.bt_revert.Location = new System.Drawing.Point(334, 195);
+            this.bt_revert.Location = new System.Drawing.Point(178, 432);
             this.bt_revert.Name = "bt_revert";
             this.bt_revert.Size = new System.Drawing.Size(95, 23);
             this.bt_revert.TabIndex = 20;
@@ -197,7 +211,7 @@
             // 
             // bt_submitchange
             // 
-            this.bt_submitchange.Location = new System.Drawing.Point(334, 164);
+            this.bt_submitchange.Location = new System.Drawing.Point(178, 401);
             this.bt_submitchange.Name = "bt_submitchange";
             this.bt_submitchange.Size = new System.Drawing.Size(95, 25);
             this.bt_submitchange.TabIndex = 19;
@@ -207,13 +221,16 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
             this.groupBox4.Controls.Add(this.bt_active);
             this.groupBox4.Controls.Add(this.bt_admin);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Location = new System.Drawing.Point(311, 41);
+            this.groupBox4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox4.ForeColor = System.Drawing.Color.Crimson;
+            this.groupBox4.Location = new System.Drawing.Point(18, 378);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(184, 109);
+            this.groupBox4.Size = new System.Drawing.Size(148, 140);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Administrative Purpose";
@@ -221,7 +238,7 @@
             // bt_active
             // 
             this.bt_active.AutoSize = true;
-            this.bt_active.Location = new System.Drawing.Point(116, 68);
+            this.bt_active.Location = new System.Drawing.Point(117, 90);
             this.bt_active.Name = "bt_active";
             this.bt_active.Size = new System.Drawing.Size(15, 14);
             this.bt_active.TabIndex = 3;
@@ -230,7 +247,7 @@
             // bt_admin
             // 
             this.bt_admin.AutoSize = true;
-            this.bt_admin.Location = new System.Drawing.Point(116, 39);
+            this.bt_admin.Location = new System.Drawing.Point(117, 61);
             this.bt_admin.Name = "bt_admin";
             this.bt_admin.Size = new System.Drawing.Size(15, 14);
             this.bt_admin.TabIndex = 2;
@@ -241,7 +258,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label17.Location = new System.Drawing.Point(20, 64);
+            this.label17.Location = new System.Drawing.Point(6, 88);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(99, 18);
             this.label17.TabIndex = 1;
@@ -252,7 +269,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label16.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label16.Location = new System.Drawing.Point(20, 35);
+            this.label16.Location = new System.Drawing.Point(6, 59);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(89, 18);
             this.label16.TabIndex = 0;
@@ -260,22 +277,18 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(23)))));
+            this.groupBox3.Controls.Add(this.panel18);
+            this.groupBox3.Controls.Add(this.panel17);
+            this.groupBox3.Controls.Add(this.panel16);
+            this.groupBox3.Controls.Add(this.panel15);
+            this.groupBox3.Controls.Add(this.panel14);
+            this.groupBox3.Controls.Add(this.panel7);
             this.groupBox3.Controls.Add(this.lb_error);
-            this.groupBox3.Controls.Add(this.tb_username);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.tb_confirmpassword);
-            this.groupBox3.Controls.Add(this.tb_firstname);
-            this.groupBox3.Controls.Add(this.tb_password);
-            this.groupBox3.Controls.Add(this.tb_middlename);
-            this.groupBox3.Controls.Add(this.tb_lastname);
+            this.groupBox3.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox3.Location = new System.Drawing.Point(16, 35);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(255, 233);
+            this.groupBox3.Size = new System.Drawing.Size(255, 333);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Personal Information";
@@ -285,7 +298,7 @@
             this.lb_error.AutoSize = true;
             this.lb_error.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.lb_error.ForeColor = System.Drawing.Color.Red;
-            this.lb_error.Location = new System.Drawing.Point(58, 188);
+            this.lb_error.Location = new System.Drawing.Point(45, 288);
             this.lb_error.Name = "lb_error";
             this.lb_error.Size = new System.Drawing.Size(171, 18);
             this.lb_error.TabIndex = 19;
@@ -294,9 +307,12 @@
             // 
             // tb_username
             // 
-            this.tb_username.Location = new System.Drawing.Point(129, 107);
+            this.tb_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.tb_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_username.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_username.Location = new System.Drawing.Point(126, 11);
             this.tb_username.Name = "tb_username";
-            this.tb_username.Size = new System.Drawing.Size(100, 20);
+            this.tb_username.Size = new System.Drawing.Size(100, 13);
             this.tb_username.TabIndex = 20;
             // 
             // label3
@@ -304,7 +320,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(49, 112);
+            this.label3.Location = new System.Drawing.Point(13, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 18);
             this.label3.TabIndex = 19;
@@ -313,11 +329,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(44, 18);
+            this.label7.Location = new System.Drawing.Point(14, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 18);
+            this.label7.Size = new System.Drawing.Size(97, 22);
             this.label7.TabIndex = 0;
             this.label7.Text = "First Name: ";
             // 
@@ -326,7 +342,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label15.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label15.Location = new System.Drawing.Point(4, 167);
+            this.label15.Location = new System.Drawing.Point(3, 10);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(124, 18);
             this.label15.TabIndex = 16;
@@ -337,7 +353,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(34, 51);
+            this.label8.Location = new System.Drawing.Point(11, 8);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 18);
             this.label8.TabIndex = 1;
@@ -348,7 +364,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label14.Location = new System.Drawing.Point(51, 136);
+            this.label14.Location = new System.Drawing.Point(13, 8);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(71, 18);
             this.label14.TabIndex = 15;
@@ -359,7 +375,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Location = new System.Drawing.Point(40, 83);
+            this.label9.Location = new System.Drawing.Point(15, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 18);
             this.label9.TabIndex = 2;
@@ -367,37 +383,53 @@
             // 
             // tb_confirmpassword
             // 
-            this.tb_confirmpassword.Location = new System.Drawing.Point(129, 165);
+            this.tb_confirmpassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.tb_confirmpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_confirmpassword.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_confirmpassword.Location = new System.Drawing.Point(138, 10);
             this.tb_confirmpassword.Name = "tb_confirmpassword";
-            this.tb_confirmpassword.Size = new System.Drawing.Size(100, 20);
+            this.tb_confirmpassword.Size = new System.Drawing.Size(100, 13);
             this.tb_confirmpassword.TabIndex = 14;
             // 
             // tb_firstname
             // 
-            this.tb_firstname.Location = new System.Drawing.Point(129, 16);
+            this.tb_firstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.tb_firstname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_firstname.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.tb_firstname.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_firstname.Location = new System.Drawing.Point(117, 8);
             this.tb_firstname.Name = "tb_firstname";
-            this.tb_firstname.Size = new System.Drawing.Size(100, 20);
+            this.tb_firstname.Size = new System.Drawing.Size(121, 19);
             this.tb_firstname.TabIndex = 3;
             // 
             // tb_password
             // 
-            this.tb_password.Location = new System.Drawing.Point(128, 134);
+            this.tb_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_password.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_password.Location = new System.Drawing.Point(128, 11);
             this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(100, 20);
+            this.tb_password.Size = new System.Drawing.Size(100, 13);
             this.tb_password.TabIndex = 13;
             // 
             // tb_middlename
             // 
-            this.tb_middlename.Location = new System.Drawing.Point(129, 49);
+            this.tb_middlename.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.tb_middlename.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_middlename.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_middlename.Location = new System.Drawing.Point(126, 10);
             this.tb_middlename.Name = "tb_middlename";
-            this.tb_middlename.Size = new System.Drawing.Size(100, 20);
+            this.tb_middlename.Size = new System.Drawing.Size(100, 13);
             this.tb_middlename.TabIndex = 4;
             // 
             // tb_lastname
             // 
-            this.tb_lastname.Location = new System.Drawing.Point(129, 81);
+            this.tb_lastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.tb_lastname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_lastname.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_lastname.Location = new System.Drawing.Point(128, 14);
             this.tb_lastname.Name = "tb_lastname";
-            this.tb_lastname.Size = new System.Drawing.Size(100, 20);
+            this.tb_lastname.Size = new System.Drawing.Size(100, 13);
             this.tb_lastname.TabIndex = 5;
             // 
             // panel3
@@ -453,6 +485,72 @@
             this.panel1.Size = new System.Drawing.Size(391, 35);
             this.panel1.TabIndex = 20;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Crimson;
+            this.panel7.Controls.Add(this.tb_firstname);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
+            this.panel7.Location = new System.Drawing.Point(0, 37);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(253, 35);
+            this.panel7.TabIndex = 32;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.Crimson;
+            this.panel14.Controls.Add(this.label8);
+            this.panel14.Controls.Add(this.tb_middlename);
+            this.panel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
+            this.panel14.Location = new System.Drawing.Point(2, 78);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(253, 35);
+            this.panel14.TabIndex = 33;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Crimson;
+            this.panel15.Controls.Add(this.tb_lastname);
+            this.panel15.Controls.Add(this.label9);
+            this.panel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
+            this.panel15.Location = new System.Drawing.Point(0, 119);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(253, 35);
+            this.panel15.TabIndex = 34;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Crimson;
+            this.panel16.Controls.Add(this.tb_username);
+            this.panel16.Controls.Add(this.label3);
+            this.panel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
+            this.panel16.Location = new System.Drawing.Point(2, 160);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(253, 35);
+            this.panel16.TabIndex = 35;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Crimson;
+            this.panel17.Controls.Add(this.tb_password);
+            this.panel17.Controls.Add(this.label14);
+            this.panel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
+            this.panel17.Location = new System.Drawing.Point(0, 201);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(253, 35);
+            this.panel17.TabIndex = 36;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.Crimson;
+            this.panel18.Controls.Add(this.tb_confirmpassword);
+            this.panel18.Controls.Add(this.label15);
+            this.panel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
+            this.panel18.Location = new System.Drawing.Point(0, 242);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(253, 35);
+            this.panel18.TabIndex = 37;
+            // 
             // EditUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,6 +576,18 @@
             this.panel10.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,5 +630,11 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
     }
 }
