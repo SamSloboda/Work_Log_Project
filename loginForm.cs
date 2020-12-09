@@ -131,6 +131,9 @@ namespace Work_Log_Project
         */
 
         {
+            //DR.HOSSAIN's connection string bellow
+            //public static String connectionString = ""Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=ENTERYOURCONNECTIONSTRING HERE;Integrated Security = True";
+
             //SAM's connection string bellow
             public static String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Sam Sloboda\\source\\repos\\Work_Log_Project\\db_WorkLog.mdf;Integrated Security = True";
 
