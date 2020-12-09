@@ -123,39 +123,41 @@ namespace Work_Log_Project
                 Boolean inspectNames = firstNames.Contains(tb_firstname.Text) && lastNames.Contains(tb_lastname.Text);
                 if (!inspectNames)
                 {
-                    //If the test passes, we will proceed to add our new record to the database
-                    //Insertion Process'
-                    //string connectionstring = loginForm.DatabaseConnect.connectionString;
-                    lb_namealert.Visible = false;
-                    lb_namealert2.Visible = false;
-                    lb_namealert3.Visible = false;
-
-                    SqlConnection connection1 = new SqlConnection(connectionstring);
-                    SqlCommand command1 = connection1.CreateCommand();
-                    try
+                    if (bt_admin.Checked)
                     {
-                        string newquery = "INSERT INTO db_User VALUES ('" + tb_username.Text + "', '" + tb_password.Text + "', " + Convert.ToByte(bt_admin.Checked)+ ", " + Convert.ToByte(bt_active.Checked)+ ");";
-                        command1.CommandText = newquery;
-                        connection1.Open();
+                        //If the test passes, we will proceed to add our new record to the database
+                        //Insertion Process'
+                        //string connectionstring = loginForm.DatabaseConnect.connectionString;
+                        lb_namealert.Visible = false;
+                        lb_namealert2.Visible = false;
+                        lb_namealert3.Visible = false;
 
-                        Int32 returnFlag = (Int32)command1.ExecuteNonQuery();
-                        if (returnFlag > 0)
+                        SqlConnection connection1 = new SqlConnection(connectionstring);
+                        SqlCommand command1 = connection1.CreateCommand();
+                        try
                         {
+                            string newquery = "INSERT INTO db_User VALUES ('" + tb_username.Text + "', '" + tb_password.Text + "', " + Convert.ToByte(bt_admin.Checked) + ", " + Convert.ToByte(bt_active.Checked) + ");";
+                            command1.CommandText = newquery;
+                            connection1.Open();
+
+                            Int32 returnFlag = (Int32)command1.ExecuteNonQuery();
+                            if (returnFlag > 0)
+                            {
+                                MessageBox.Show("Record successfully created! The new Admin is added.", "Operation Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Unfortunately, we couldnt process your data", "Bummer!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                             command1.Dispose();
                             connection1.Close();
 
-
                         }
-                        else
+                        catch (Exception Ex)
                         {
-                            MessageBox.Show("Error in creating a user account. ");
-                        }
-
-
-                    }
-                    catch (Exception Ex)
-                    {
-                        MessageBox.Show(Ex.Message.ToString());
+                            MessageBox.Show(Ex.Message.ToString());
+                        } 
                     }
                    
 
@@ -163,6 +165,44 @@ namespace Work_Log_Project
 
                     if (!bt_admin.Checked)
                     {
+
+                        //If the test passes, we will proceed to add our new record to the database
+                        //Insertion Process'
+                        //string connectionstring = loginForm.DatabaseConnect.connectionString;
+                        lb_namealert.Visible = false;
+                        lb_namealert2.Visible = false;
+                        lb_namealert3.Visible = false;
+
+                        SqlConnection connection1 = new SqlConnection(connectionstring);
+                        SqlCommand command1 = connection1.CreateCommand();
+                        try
+                        {
+                            string newquery = "INSERT INTO db_User VALUES ('" + tb_username.Text + "', '" + tb_password.Text + "', " + Convert.ToByte(bt_admin.Checked) + ", " + Convert.ToByte(bt_active.Checked) + ");";
+                            command1.CommandText = newquery;
+                            connection1.Open();
+
+                            Int32 returnFlag = (Int32)command1.ExecuteNonQuery();
+                            if (returnFlag > 0)
+                            {
+                                command1.Dispose();
+                                connection1.Close();
+
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error in creating a user account. ");
+                                command1.Dispose();
+                                connection1.Close();
+                            }
+
+
+                        }
+                        catch (Exception Ex)
+                        {
+                            MessageBox.Show(Ex.Message.ToString());
+                        }
+
                         SqlConnection connection12 = new SqlConnection(connectionstring);
                         SqlCommand command12 = connection12.CreateCommand();
                         try
@@ -187,15 +227,14 @@ namespace Work_Log_Project
                         }
 
                         catch (Exception Ex)
-                    {
+                        {
                         MessageBox.Show(Ex.Message.ToString());
-                    }
+                        }
                         
-                }
+                    }
 
                    
                 }
-
                 else
                 {
                     lb_namealert.Visible = true;
@@ -208,7 +247,7 @@ namespace Work_Log_Project
             }
             else
             {
-                if (notComplete )
+                if (notComplete)
                 {
                     MessageBox.Show("Input Error. Please fill up all required fields. ", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
