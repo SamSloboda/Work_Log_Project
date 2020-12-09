@@ -178,6 +178,7 @@ namespace Work_Log_Project
             string[] starting;
             string[] ending;
             string log_id;
+
             listView1.Items.Clear();
 
             for (i = 0; i <= dt.Rows.Count - 1; i++)
@@ -263,6 +264,12 @@ namespace Work_Log_Project
             e.Graphics.DrawString( userClass.employee_id.ToString() , font1, Brushes.Black, 200, height + 100);
             e.Graphics.DrawLine(pen, 50, 175, 820, 175);
 
+            e.Graphics.DrawString("Total Attendance: ", font, Brushes.Black, 550, height+40);
+            e.Graphics.DrawString("Total Break: ", font, Brushes.Black, 550, height + 60);
+            e.Graphics.DrawString("Total Worked: ", font, Brushes.Black, 550, height + 80);
+
+
+
             //Columns
             e.Graphics.DrawString("Date", font, Brushes.Black, 50, 200);
             e.Graphics.DrawString("Start Time ", font, Brushes.Black, 200, 200);
@@ -272,21 +279,40 @@ namespace Work_Log_Project
 
             //Filling it with content from ListView
             int y = 250;
-            int TotalHoursWorked = 0;
+            TimeSpan TotalHoursWorked = TimeSpan.FromMinutes(0);
+            TimeSpan TotalAttandance = TimeSpan.FromMinutes(0);
+            TimeSpan TotalBreak = TimeSpan.FromMinutes(0);
             foreach (ListViewItem itemRow in listView1.Items) 
             {
                 int x = 50;                
                 for (int i = 1; i < itemRow.SubItems.Count; i++)
                 {
-                    e.Graphics.DrawString(itemRow.SubItems[i].Text, font, Brushes.Black, x+(i-1)*150, y);
-                    e.Graphics.DrawString("", font, Brushes.Black, 650, y);
+                    e.Graphics.DrawString(itemRow.SubItems[i].Text, font1, Brushes.Black, x+(i-1)*150, y);
+                }             
+                DateTime start = DateTime.Parse(itemRow.SubItems[2].Text);
+                DateTime end = DateTime.Parse(itemRow.SubItems[3].Text);
+                int breakTotal = Int32.Parse(itemRow.SubItems[4].Text);
+                TimeSpan breakTot = TimeSpan.FromMinutes(breakTotal);
 
+                TimeSpan differenceInMins = end - start;
+                TimeSpan finalDiff = differenceInMins - breakTot;
 
-                }
+                e.Graphics.DrawString(finalDiff.ToString(), font1, Brushes.Black, 650, y);
                 y += 20;
 
+                TotalHoursWorked += finalDiff;
+                TotalBreak += breakTot;
+                TotalAttandance += differenceInMins;
+
             }
-      
+            string TotAtt = Math.Floor(TotalAttandance.TotalHours).ToString() + ":" + TotalAttandance.Minutes.ToString("D2");
+            string TotBrk = Math.Floor(TotalBreak.TotalHours).ToString() + ":" + TotalBreak.Minutes.ToString("D2");
+            string TotWrk = Math.Floor(TotalHoursWorked.TotalHours).ToString() + ":" + TotalHoursWorked.Minutes.ToString("D2");
+            e.Graphics.DrawString(TotAtt, font1, Brushes.Black, 700, height + 40);
+            e.Graphics.DrawString(TotBrk.ToString(), font1, Brushes.Black, 700, height + 60);
+            e.Graphics.DrawString(TotWrk.ToString(), font1, Brushes.Black, 700, height + 80);
+
+
 
         }
 
