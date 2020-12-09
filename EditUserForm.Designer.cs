@@ -73,6 +73,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.lb_close = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -103,7 +107,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
-            this.groupBox1.Location = new System.Drawing.Point(10, 63);
+            this.groupBox1.Location = new System.Drawing.Point(10, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(391, 149);
             this.groupBox1.TabIndex = 0;
@@ -185,7 +189,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(6, 38);
+            this.label1.Location = new System.Drawing.Point(16, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(380, 22);
             this.label1.TabIndex = 1;
@@ -200,7 +204,7 @@
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.ForeColor = System.Drawing.Color.Crimson;
-            this.groupBox2.Location = new System.Drawing.Point(67, 218);
+            this.groupBox2.Location = new System.Drawing.Point(67, 230);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(276, 475);
             this.groupBox2.TabIndex = 2;
@@ -528,9 +532,9 @@
             this.panel14.Controls.Add(this.label8);
             this.panel14.Controls.Add(this.tb_middlename);
             this.panel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
-            this.panel14.Location = new System.Drawing.Point(2, 78);
+            this.panel14.Location = new System.Drawing.Point(0, 78);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(262, 35);
+            this.panel14.Size = new System.Drawing.Size(264, 35);
             this.panel14.TabIndex = 33;
             // 
             // panel15
@@ -550,9 +554,9 @@
             this.panel16.Controls.Add(this.tb_username);
             this.panel16.Controls.Add(this.label3);
             this.panel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(83)))), ((int)(((byte)(80)))));
-            this.panel16.Location = new System.Drawing.Point(2, 160);
+            this.panel16.Location = new System.Drawing.Point(0, 160);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(262, 35);
+            this.panel16.Size = new System.Drawing.Size(264, 35);
             this.panel16.TabIndex = 35;
             // 
             // panel17
@@ -617,12 +621,55 @@
             this.panel6.Size = new System.Drawing.Size(106, 36);
             this.panel6.TabIndex = 14;
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
+            this.panel11.Location = new System.Drawing.Point(1, 713);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(412, 10);
+            this.panel11.TabIndex = 41;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Crimson;
+            this.panel12.Location = new System.Drawing.Point(1, 716);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(412, 10);
+            this.panel12.TabIndex = 40;
+            // 
+            // lb_close
+            // 
+            this.lb_close.AutoSize = true;
+            this.lb_close.BackColor = System.Drawing.Color.Transparent;
+            this.lb_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.lb_close.ForeColor = System.Drawing.Color.Crimson;
+            this.lb_close.Location = new System.Drawing.Point(371, 9);
+            this.lb_close.Name = "lb_close";
+            this.lb_close.Size = new System.Drawing.Size(30, 29);
+            this.lb_close.TabIndex = 42;
+            this.lb_close.Text = "X";
+            this.lb_close.Click += new System.EventHandler(this.lb_close_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, -3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(412, 25);
+            this.flowLayoutPanel1.TabIndex = 43;
+            this.flowLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
+            this.flowLayoutPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseMove);
+            this.flowLayoutPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseUp);
+            // 
             // EditUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(411, 725);
+            this.Controls.Add(this.lb_close);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel12);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -710,5 +757,9 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label lb_close;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

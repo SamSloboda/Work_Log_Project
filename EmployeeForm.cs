@@ -321,6 +321,11 @@ namespace Work_Log_Project
 
         }
 
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void flowLayoutPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
