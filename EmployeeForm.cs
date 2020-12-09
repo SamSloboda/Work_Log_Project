@@ -263,6 +263,31 @@ namespace Work_Log_Project
             e.Graphics.DrawString( userClass.employee_id.ToString() , font1, Brushes.Black, 200, height + 100);
             e.Graphics.DrawLine(pen, 50, 175, 820, 175);
 
+            //Columns
+            e.Graphics.DrawString("Date", font, Brushes.Black, 50, 200);
+            e.Graphics.DrawString("Start Time ", font, Brushes.Black, 200, 200);
+            e.Graphics.DrawString("End Time ", font, Brushes.Black, 350, 200);
+            e.Graphics.DrawString("Break Time ", font, Brushes.Black, 500, 200);
+            e.Graphics.DrawString("Total Work ", font, Brushes.Black, 650, 200);
+
+            //Filling it with content from ListView
+            int y = 250;
+            int TotalHoursWorked = 0;
+            foreach (ListViewItem itemRow in listView1.Items) 
+            {
+                int x = 50;                
+                for (int i = 1; i < itemRow.SubItems.Count; i++)
+                {
+                    e.Graphics.DrawString(itemRow.SubItems[i].Text, font, Brushes.Black, x+(i-1)*150, y);
+                    e.Graphics.DrawString(, font, Brushes.Black, 650, y);
+
+
+                }
+                y += 20;
+
+            }
+      
+
         }
 
         private void printPreviewDialog1_Load(object sender, EventArgs e)
