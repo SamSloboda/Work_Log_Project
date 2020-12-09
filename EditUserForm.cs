@@ -156,7 +156,7 @@ namespace Work_Log_Project
 
                 //Using Contains() method to check if we can see if the data matches
                 Boolean inspectNames = usernames.Contains(tb_username.Text);
-                if (true)
+                if (!inspectNames)
                 {
                     if (bt_admin.Checked)
                     {
