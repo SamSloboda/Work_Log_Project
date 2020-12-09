@@ -296,5 +296,15 @@ namespace Work_Log_Project
             admin.ShowDialog();
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditUserForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -78,6 +78,11 @@ namespace Work_Log_Project
 
         }
 
+        private void lb_welcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void flowLayoutPanel1_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
