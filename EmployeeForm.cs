@@ -279,7 +279,7 @@ namespace Work_Log_Project
                 for (int i = 1; i < itemRow.SubItems.Count; i++)
                 {
                     e.Graphics.DrawString(itemRow.SubItems[i].Text, font, Brushes.Black, x+(i-1)*150, y);
-                    e.Graphics.DrawString(, font, Brushes.Black, 650, y);
+                    e.Graphics.DrawString("", font, Brushes.Black, 650, y);
 
 
                 }
