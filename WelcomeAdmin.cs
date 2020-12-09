@@ -15,7 +15,7 @@ namespace Work_Log_Project
         public WelcomeAdmin()
         {
             InitializeComponent();
-            lb_welcome.Text = userClass.username + "!";
+            lb_welcome.Text ="Admin " + userClass.username;
         }
         int mouseX = 0, mouseY = 0;
         bool mouseDown;
@@ -44,9 +44,7 @@ namespace Work_Log_Project
 
         private void bt_Signout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            loginForm form = new loginForm();
-            form.ShowDialog();
+            this.Close();            
         }
 
         private void bt_delete_Click_1(object sender, EventArgs e)
