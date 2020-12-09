@@ -81,8 +81,8 @@
             // lb_options
             // 
             this.lb_options.AutoSize = true;
-            this.lb_options.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lb_options.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lb_options.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb_options.ForeColor = System.Drawing.Color.Crimson;
             this.lb_options.Location = new System.Drawing.Point(25, 156);
             this.lb_options.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_options.Name = "lb_options";
@@ -187,7 +187,7 @@
             this.lb_welcome.AutoSize = true;
             this.lb_welcome.Font = new System.Drawing.Font("Trebuchet MS", 14F);
             this.lb_welcome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_welcome.Location = new System.Drawing.Point(73, 94);
+            this.lb_welcome.Location = new System.Drawing.Point(69, 104);
             this.lb_welcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_welcome.Name = "lb_welcome";
             this.lb_welcome.Size = new System.Drawing.Size(57, 29);
