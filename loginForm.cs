@@ -28,93 +28,97 @@ namespace Work_Log_Project
         private void bt_login_Click(object sender, EventArgs e)
         {
             ///checks if user inputs empty string into textBoxes
-            if (tb_username.Text == "" || tb_password.Text == "") 
+            if (tb_username.Text == "" || tb_password.Text == "")
             {
-                MessageBox.Show("Please enter username and password!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter username and password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            try
+            else 
             {
-                ///creates connection string and creates connection
-                String cs = DatabaseConnect.connectionString;
-                SqlConnection con = new SqlConnection(cs);
-
-                ///select all the users that match password and username
-                string sel = "select * FROM db_User where username = @username AND password = @password AND activeUser = @activeuser ";
-                SqlCommand myCommand = new SqlCommand(sel, con); ;
-
-                ///parameters for the sel command above
-                SqlParameter uName = new SqlParameter("@username", SqlDbType.VarChar);
-                SqlParameter uPassword = new SqlParameter("@password", SqlDbType.VarChar);
-                SqlParameter uActive = new SqlParameter("@activeuser", SqlDbType.Bit);
-
-                ///assigning values from the textboxes into parameters
-                uName.Value = tb_username.Text;
-                uPassword.Value = tb_password.Text;
-                uActive.Value = true; //user is active
-
-                ///adding paramaters to the command
-                myCommand.Parameters.Add(uName);
-                myCommand.Parameters.Add(uPassword);
-                myCommand.Parameters.Add(uActive);
-
-                ///opening connection
-                myCommand.Connection.Open();
- 
-                ///reader class for database  
-                SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
-
-                ///if the username and password was found in database return true
-                if (myReader.Read() == true)
-                {    
-                    ///assigning values of user to the userClass class.
-                    userClass.user_id = myReader.GetInt32(0);
-                    userClass.username = myReader.GetString(1);
-                    userClass.password = myReader.GetString(2);
-                    userClass.adminAcc = myReader.GetBoolean(3);
-                    userClass.activeUser = myReader.GetBoolean(4);
-
-                    ///if admin
-                    if (myReader.GetBoolean(3) == true)
-                    {
-                        MessageBox.Show("You have logged in successfully as: Admin " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        tb_password.Text = "";
-                        this.Hide();
-                        ///showing employerForm
-                        // AdminPage employerForm = new AdminPage();
-                        // employerForm.ShowDialog();
-                        WelcomeAdmin form = new WelcomeAdmin();
-                        form.ShowDialog();
-
-                    }
-                    ///if normal employee account
-                    if (myReader.GetBoolean(3) == false)
-                    {
-                        MessageBox.Show("You have logged in successfully as: User " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        tb_password.Text = "";
-                        ///showing employeeForm
-                        
-                       EmployeeForm employeeForm = new EmployeeForm();
-                       employeeForm.ShowDialog();
-                    }
-                }
-                else 
+                try
                 {
-                    ///if the username and password doesn't match with all the users found in database
-                    MessageBox.Show("Incorrect name or password!", "Incorect Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                ///if the connection is still present close the connection with database
-                if (con.State == ConnectionState.Open)
-                {
-                    con.Dispose();
-                    con.Close();
-                }
+                    ///creates connection string and creates connection
+                    String cs = DatabaseConnect.connectionString;
+                    SqlConnection con = new SqlConnection(cs);
 
+                    ///select all the users that match password and username
+                    string sel = "select * FROM db_User where username = @username AND password = @password AND activeUser = @activeuser ";
+                    SqlCommand myCommand = new SqlCommand(sel, con); ;
+
+                    ///parameters for the sel command above
+                    SqlParameter uName = new SqlParameter("@username", SqlDbType.VarChar);
+                    SqlParameter uPassword = new SqlParameter("@password", SqlDbType.VarChar);
+                    SqlParameter uActive = new SqlParameter("@activeuser", SqlDbType.Bit);
+
+                    ///assigning values from the textboxes into parameters
+                    uName.Value = tb_username.Text;
+                    uPassword.Value = tb_password.Text;
+                    uActive.Value = true; //user is active
+
+                    ///adding paramaters to the command
+                    myCommand.Parameters.Add(uName);
+                    myCommand.Parameters.Add(uPassword);
+                    myCommand.Parameters.Add(uActive);
+
+                    ///opening connection
+                    myCommand.Connection.Open();
+
+                    ///reader class for database  
+                    SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+                    ///if the username and password was found in database return true
+                    if (myReader.Read() == true)
+                    {
+                        ///assigning values of user to the userClass class.
+                        userClass.user_id = myReader.GetInt32(0);
+                        userClass.username = myReader.GetString(1);
+                        userClass.password = myReader.GetString(2);
+                        userClass.adminAcc = myReader.GetBoolean(3);
+                        userClass.activeUser = myReader.GetBoolean(4);
+
+                        ///if admin
+                        if (myReader.GetBoolean(3) == true)
+                        {
+                            MessageBox.Show("You have logged in successfully as: Admin " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            tb_password.Text = "";
+                            this.Hide();
+                            ///showing employerForm
+                            // AdminPage employerForm = new AdminPage();
+                            // employerForm.ShowDialog();
+                            WelcomeAdmin form = new WelcomeAdmin();
+                            form.ShowDialog();
+
+                        }
+                        ///if normal employee account
+                        if (myReader.GetBoolean(3) == false)
+                        {
+                            MessageBox.Show("You have logged in successfully as: User " + userClass.username, "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            tb_password.Text = "";
+                            ///showing employeeForm
+
+                            EmployeeForm employeeForm = new EmployeeForm();
+                            employeeForm.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        ///if the username and password doesn't match with all the users found in database
+                        MessageBox.Show("Incorrect name or password!", "Incorect Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    ///if the connection is still present close the connection with database
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Dispose();
+                        con.Close();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+           
             
 
         }
