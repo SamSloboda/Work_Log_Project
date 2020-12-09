@@ -16,7 +16,7 @@ namespace Work_Log_Project
         public RemoveEmployee()
         {
             InitializeComponent();
-            lb_user.Text = userClass.username;
+            label1.Text = label1.Text+" Admin "+ userClass.username;
         }
         int mouseX = 0, mouseY = 0;
         bool mouseDown;
@@ -161,20 +161,12 @@ namespace Work_Log_Project
 
         private void bt_goback_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            WelcomeAdmin page = new WelcomeAdmin();
-            page.ShowDialog();
+            this.Close();
         }
 
         private void bt_signout_Click(object sender, EventArgs e)
         {
-            foreach(Form openedform in Application.OpenForms)
-            {
-                
-                openedform.Hide();
-            }
-            loginForm form = new loginForm();
-            form.ShowDialog();
+            this.Close();
         }
 
         
@@ -189,8 +181,8 @@ namespace Work_Log_Project
             myCommand.Connection.Open();
             SqlDataReader myreader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
             listView1.FullRowSelect=true;
-            listView1.Columns.Add("UserID",40);
-            listView1.Columns.Add("Emp.ID",40);
+            listView1.Columns.Add("User ID",40);
+            listView1.Columns.Add("Employee ID",40);
             listView1.Columns.Add("First Name",80);
             // listView1.Columns.Add("Middle Name");
             listView1.Columns.Add("Last Name",100);
@@ -231,11 +223,13 @@ namespace Work_Log_Project
                 listitem.SubItems.Add(dr["activeUser"].ToString());
                 listView1.Items.Add(listitem);
             }
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
         }
 
 
-        
+
 
         private void label9_Click(object sender, EventArgs e)
         {
