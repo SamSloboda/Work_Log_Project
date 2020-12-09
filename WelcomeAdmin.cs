@@ -33,7 +33,7 @@ namespace Work_Log_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //TODO: Not functional at the moment.
         }
 
         private void bt_edit_Click(object sender, EventArgs e)

@@ -156,7 +156,7 @@ namespace Work_Log_Project
 
                 //Using Contains() method to check if we can see if the data matches
                 Boolean inspectNames = usernames.Contains(tb_username.Text);
-                if (!inspectNames)
+                if (true)
                 {
                     if (bt_admin.Checked)
                     {
@@ -169,7 +169,7 @@ namespace Work_Log_Project
                         SqlCommand command1 = connection1.CreateCommand();
                         try
                         {
-                            string newquery = "UPDATE db_User SET username = '" + tb_username.Text + "', password='" + tb_password.Text + "', adminAcc = " + Convert.ToByte(bt_admin.Checked) + ", activeUser =  " + Convert.ToByte(bt_active.Checked) + " WHERE user_id = " + userID+ ";";
+                            string newquery = "UPDATE db_User SET password='" + tb_password.Text + "', adminAcc = " + Convert.ToByte(bt_admin.Checked) + ", activeUser =  " + Convert.ToByte(bt_active.Checked) + " WHERE user_id = " + userID+ ";";
                             command1.CommandText = newquery;
                             connection1.Open();
 
@@ -209,7 +209,8 @@ namespace Work_Log_Project
                         try
                         {
                             {
-                                string newquery = "UPDATE db_User SET username = '" + tb_username.Text + "', password='" + tb_password.Text + "', adminAcc = " + Convert.ToByte(bt_admin.Checked) + ", activeUser =  " + Convert.ToByte(bt_active.Checked) + " WHERE user_id = " + userID + ";"; command1.CommandText = newquery;
+                                string newquery = "UPDATE db_User SET password='" + tb_password.Text + "', adminAcc = " + Convert.ToByte(bt_admin.Checked) + ", activeUser =  " + Convert.ToByte(bt_active.Checked) + " WHERE user_id = " + userID + ";"; 
+                                command1.CommandText = newquery;
                                 connection1.Open();
 
                                 Int32 returnFlag = (Int32)command1.ExecuteNonQuery();
@@ -239,7 +240,7 @@ namespace Work_Log_Project
                         SqlCommand command12 = connection12.CreateCommand();
                         try
                         {
-                            string newquery = "UPDATE Employee  SET firstName = '" + tb_firstname.Text + "', middleName = '" + tb_middlename.Text + "', lastName = '" + tb_lastname.Text + "', creationTime = GETDATE()  WHERE employee_id =" + employeeID + ";";
+                            string newquery = "UPDATE Employee  SET firstName = '" + tb_firstname.Text + "', middleName = '" + tb_middlename.Text + "', lastName = '" + tb_lastname.Text + "'  WHERE employee_id =" + employeeID + ";";
                                 
                             command12.CommandText = newquery;
                             connection12.Open();
@@ -293,10 +294,7 @@ namespace Work_Log_Project
 
         private void bt_revert_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            WelcomeAdmin admin = new WelcomeAdmin();
-            admin.ShowDialog();
-            
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
