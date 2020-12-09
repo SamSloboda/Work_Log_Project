@@ -227,6 +227,49 @@ namespace Work_Log_Project
             this.Close();
         }
 
+        private void bt_TotalAttendance_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                printDialog1.Document = printDocument1;
+                printDocument1.PrinterSettings = printDialog1.PrinterSettings;
+                printDocument1.PrinterSettings.DefaultPageSettings.Landscape = false;
+                printDocument1.Print();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }           
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            //Header of the printed document
+            int height = 50;
+            float sizeOfFont = 12.0f;
+            Font font = new Font("Times New Roman", sizeOfFont, FontStyle.Bold);
+            Font font1 = new Font("Times New Roman", sizeOfFont);
+            Pen pen = new Pen(Brushes.Black);
+            e.Graphics.DrawString("Total Log of "+userClass.firstName+" "+ userClass.lastName, font, Brushes.Black,50,height);
+            e.Graphics.DrawString("Generated at: " + DateTime.Now.ToString() , font, Brushes.Black, 550, height);
+            e.Graphics.DrawLine(pen,50,75,820,75);
+            e.Graphics.DrawString("First name: ", font, Brushes.Black, 50, height+40);
+            e.Graphics.DrawString(userClass.firstName, font1, Brushes.Black, 200, height + 40);
+            e.Graphics.DrawString("Middle name: ", font, Brushes.Black, 50, height+60);
+            e.Graphics.DrawString(userClass.middleName, font1, Brushes.Black, 200, height + 60);
+            e.Graphics.DrawString("Last name: ", font, Brushes.Black, 50, height+80);
+            e.Graphics.DrawString( userClass.lastName, font1, Brushes.Black, 200, height + 80);
+            e.Graphics.DrawString("Employee ID: ", font, Brushes.Black, 50, height+100);
+            e.Graphics.DrawString( userClass.employee_id.ToString() , font1, Brushes.Black, 200, height + 100);
+            e.Graphics.DrawLine(pen, 50, 175, 820, 175);
+
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void flowLayoutPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
