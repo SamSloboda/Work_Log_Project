@@ -91,7 +91,7 @@ namespace Work_Log_Project
             // Lets get the connection to get Existing data! We want to compare our input with the existing data
             if (!notComplete&&passwordMatch)
             {
-                string query = "SELECT * FROM Employee";
+                string query = "SELECT * FROM db_User";
                 SqlConnection connection = new SqlConnection(connectionstring);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 connection.Open();
@@ -105,22 +105,20 @@ namespace Work_Log_Project
 
 
                 //Storing them in list will make it easier for us to use contains method and find if there is any duplicate values.
-                List<string> firstNames = new List<string>(table.Rows.Count);
-                List<string> lastNames = new List<string>(table.Rows.Count);
+                List<string> usernames = new List<string>(table.Rows.Count);
+                
                 
 
 
                 foreach (DataRow row in table.Rows)
-                    firstNames.Add((string)row["firstName"]);
-                foreach (DataRow row in table.Rows)
-                    lastNames.Add((string)row["lastName"]);
-               
+                    usernames.Add((string)row["username"]);
+                            
 
 
 
           
                 //Using Contains() method to check if we can see if the data matches
-                Boolean inspectNames = firstNames.Contains(tb_firstname.Text) && lastNames.Contains(tb_lastname.Text);
+                Boolean inspectNames = usernames.Contains(tb_username.Text);
                 if (!inspectNames)
                 {
                     if (bt_admin.Checked)
